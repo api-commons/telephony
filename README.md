@@ -17,7 +17,7 @@ generated. Every number below is a count of providers.
 | transcription | 18 | 13 | id 62%, created_at 54%, status 54% | transcriptions 9, transcription 6, transcript 5, transcripts 2 |
 | conference | 8 | 8 | id 75%, status 62%, created_at 50%, name 50% | conferences 6, conference 2 |
 
-Cohort: 146 providers with harvested OpenAPI, 49 crosswalks. Of the providers exposing a call: 76% create, 86% list, 76% fetch, 18% update, 31% delete. Generated 2026-11-10 by build.py.
+Cohort: 146 providers with harvested OpenAPI, 49 crosswalks. Of the providers exposing a call: 76% create, 86% list, 76% fetch, 18% update, 31% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
@@ -27,7 +27,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 
 - A call agrees on status, direction, the caller and created_at across CPaaS platforms, business phone systems and voice-AI agents -- the call-detail record is shared.
 - A recording agrees on id, duration, status and created_at; a conference on id, name, status and created_at.
-- Transcriptions span call transcripts and general speech-to-text jobs: they agree only on id, status and created_at, because the transcript itself is text, utterances or segments.
+- Transcriptions span call transcripts and general speech-to-text jobs, and agree only on id, status and created_at -- the transcript itself is text, utterances or segments depending on the provider.
 
 ## Artifacts
 

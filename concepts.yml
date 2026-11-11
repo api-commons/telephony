@@ -66,8 +66,9 @@ findings:
     business phone systems and voice-AI agents -- the call-detail record is shared."
   - "A recording agrees on id, duration, status and created_at; a conference on id, name,
     status and created_at."
-  - "Transcriptions span call transcripts and general speech-to-text jobs: they agree only on id,
-    status and created_at, because the transcript itself is text, utterances or segments."
+  - "Transcriptions span call transcripts and general speech-to-text jobs, and agree only on
+    id, status and created_at -- the transcript itself is text, utterances or segments
+    depending on the provider."
 decisions:
   - "Phone numbers are the messaging context's: one number serves voice and SMS, and the
     concept is not duplicated."
