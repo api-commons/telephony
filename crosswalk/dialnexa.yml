@@ -1,0 +1,20 @@
+provider: dialnexa
+apis_io: https://apis.io/providers/dialnexa/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      id: id
+      agent_id: agent_id
+      phone_number: phone_number
+      metadata: metadata
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/dialnexa-api-openapi.yml#GET /v1/calls
+    - openapi/_original/dialnexa-api-openapi.yml#GET /v1/calls/{id}
+    - openapi/_original/dialnexa-api-openapi.yml#POST /v1/calls
+    - openapi/_original/dialnexa-openapi.json#GET /v1/calls
+    - openapi/_original/dialnexa-openapi.json#GET /v1/calls/{id}

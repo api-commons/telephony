@@ -1,0 +1,42 @@
+provider: sarj-ai-developer-api
+apis_io: https://apis.io/providers/sarj-ai-developer-api/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at:
+      - created_at
+      - started_at
+      id: id
+      direction: direction
+      ended_at: ended_at
+      duration:
+      - duration
+      - duration_seconds
+      agent_id: user_id
+      updated_at: updated_at
+      phone_number: phone_number
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/sarj-ai-developer-api-developer-openapi.json#GET /calls/{call_id}
+    - openapi/_original/sarj-ai-developer-api-developer-openapi.json#POST /calls
+    - openapi/_original/sarj-ai-developer-api-voice-platform-openapi.json#GET /v1/beta/scenario-insights/{scenario_insight_id}/calls
+    - openapi/_original/sarj-ai-developer-api-voice-platform-openapi.json#POST /v1/beta/calls/batch
+  recording:
+    path_segment:
+    - recording
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/sarj-ai-developer-api-developer-openapi.json#GET /calls/{call_id}/recording
+  transcription:
+    path_segment:
+    - transcriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/sarj-ai-developer-api-stt-openapi.json#POST /openai/v1/audio/transcriptions

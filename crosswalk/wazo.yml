@@ -1,0 +1,63 @@
+provider: wazo
+apis_io: https://apis.io/providers/wazo/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      id: id
+      direction: direction
+      from: source
+      to: destination
+      ended_at: hangup_time
+      call_id: call_id
+      agent_id: extension
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/wazo-calld-api-openapi.yml#DELETE /applications/{application_uuid}/calls/{call_id}
+    - openapi/_original/wazo-calld-api-openapi.yml#DELETE /applications/{application_uuid}/nodes/{node_uuid}/calls/{call_id}
+    - openapi/_original/wazo-calld-api-openapi.yml#DELETE /calls/{call_id}
+    - openapi/_original/wazo-calld-api-openapi.yml#DELETE /users/me/calls/{call_id}
+    - openapi/_original/wazo-calld-api-openapi.yml#GET /applications/{application_uuid}/calls
+  recording:
+    path_segment:
+    - recording
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/wazo-calld-api-openapi.yml#GET /users/me/voicemails/messages/{message_id}/recording
+    - openapi/_original/wazo-calld-api-openapi.yml#GET /voicemails/{voicemail_id}/messages/{message_id}/recording
+    - openapi/_original/wazo-calld-openapi-original.yml#GET /users/me/voicemails/messages/{message_id}/recording
+    - openapi/_original/wazo-calld-openapi-original.yml#GET /voicemails/{voicemail_id}/messages/{message_id}/recording
+  transcription:
+    path_segment:
+    - transcription
+    - transcriptions
+    properties:
+      created_at: created_at
+      text: transcription_text
+      language: language
+      duration: duration
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/wazo-call-logd-api-openapi.yml#GET /voicemails/transcriptions
+    - openapi/_original/wazo-call-logd-openapi-original.yml#GET /voicemails/transcriptions
+    - openapi/_original/wazo-confd-api-openapi.yml#GET /voicemails/transcription
+    - openapi/_original/wazo-confd-api-openapi.yml#PUT /voicemails/transcription
+    - openapi/_original/wazo-confd-openapi-original.yml#GET /voicemails/transcription
+  conference:
+    path_segment:
+    - conferences
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/wazo-confd-api-openapi.yml#DELETE /conferences/{conference_id}
+    - openapi/_original/wazo-confd-api-openapi.yml#GET /conferences
+    - openapi/_original/wazo-confd-api-openapi.yml#GET /conferences/{conference_id}
+    - openapi/_original/wazo-confd-api-openapi.yml#POST /conferences
+    - openapi/_original/wazo-confd-api-openapi.yml#PUT /conferences/{conference_id}

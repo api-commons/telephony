@@ -1,0 +1,26 @@
+provider: vapi
+apis_io: https://apis.io/providers/vapi/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - call
+    properties:
+      status: status
+      created_at:
+      - createdAt
+      - startedAt
+      id: id
+      direction: type
+      to: destination
+      ended_at: endedAt
+      updated_at: updatedAt
+      phone_number: phoneNumber
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/vapi-openapi.yml#DELETE /call/{id}
+    - openapi/_original/vapi-openapi.yml#GET /call
+    - openapi/_original/vapi-openapi.yml#GET /call/{id}
+    - openapi/_original/vapi-openapi.yml#PATCH /call/{id}
+    - openapi/_original/vapi-openapi.yml#POST /call

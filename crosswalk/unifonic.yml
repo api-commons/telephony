@@ -1,0 +1,16 @@
+provider: unifonic
+apis_io: https://apis.io/providers/unifonic/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      direction: type
+      from: callerId
+      call_id: callId
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/unifonic-voice-openapi-original.json#POST /calls

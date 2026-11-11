@@ -1,0 +1,53 @@
+provider: genesys
+apis_io: https://apis.io/providers/genesys/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: state
+      created_at: startTime
+      id: id
+      from: callerId
+      ended_at: endTime
+      phone_number: phoneNumber
+      metadata: attributes
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/calls
+    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/calls/{conversationId}
+    - openapi/_original/genesys-platform-api-openapi-original.json#PATCH /api/v2/conversations/calls/{conversationId}
+    - openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/conversations/calls
+    - openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/conversations/calls/{conversationId}
+  recording:
+    path_segment:
+    - recordings
+    properties:
+      id: id
+      created_at: startTime
+      format: contentType
+      end_time: endTime
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/{conversationId}/recordings
+    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/{conversationId}/recordings/{recordingId}
+    - openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/uploads/recordings
+    - openapi/_original/genesys-platform-api-openapi-original.json#PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}
+  transcription:
+    path_segment:
+    - transcription
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/routing/settings/transcription
+    - openapi/_original/genesys-platform-api-openapi-original.json#PATCH /api/v2/routing/settings/transcription
+    - openapi/_original/genesys-platform-api-openapi-original.json#PUT /api/v2/routing/settings/transcription
+  conference:
+    path_segment:
+    - conference
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/genesys-platform-api-openapi-original.json#PATCH /api/v2/conversations/calls/{conversationId}/conference

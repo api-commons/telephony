@@ -1,0 +1,295 @@
+context: telephony
+generated: '2026-11-10'
+adopters:
+- provider: 46elks
+  apis_io: https://apis.io/providers/46elks/
+  crosswalk: crosswalk/46elks.yml
+  concepts:
+  - call
+  - recording
+- provider: 8x8
+  apis_io: https://apis.io/providers/8x8/
+  crosswalk: crosswalk/8x8.yml
+  concepts:
+  - call
+  - recording
+  - transcription
+- provider: africastalking
+  apis_io: https://apis.io/providers/africastalking/
+  crosswalk: crosswalk/africastalking.yml
+  concepts:
+  - call
+- provider: agentphone
+  apis_io: https://apis.io/providers/agentphone/
+  crosswalk: crosswalk/agentphone.yml
+  concepts:
+  - call
+  - recording
+  - transcription
+- provider: aircall
+  apis_io: https://apis.io/providers/aircall/
+  crosswalk: crosswalk/aircall.yml
+  concepts:
+  - call
+  - transcription
+- provider: amigo
+  apis_io: https://apis.io/providers/amigo/
+  crosswalk: crosswalk/amigo.yml
+  concepts:
+  - call
+  - transcription
+- provider: bandwidth
+  apis_io: https://apis.io/providers/bandwidth/
+  crosswalk: crosswalk/bandwidth.yml
+  concepts:
+  - call
+  - conference
+  - recording
+  - transcription
+- provider: bird
+  apis_io: https://apis.io/providers/bird/
+  crosswalk: crosswalk/bird.yml
+  concepts:
+  - call
+  - recording
+  - transcription
+- provider: bland-ai
+  apis_io: https://apis.io/providers/bland-ai/
+  crosswalk: crosswalk/bland-ai.yml
+  concepts:
+  - call
+- provider: callrail
+  apis_io: https://apis.io/providers/callrail/
+  crosswalk: crosswalk/callrail.yml
+  concepts:
+  - call
+- provider: cartesia-ai
+  apis_io: https://apis.io/providers/cartesia-ai/
+  crosswalk: crosswalk/cartesia-ai.yml
+  concepts:
+  - call
+- provider: cisco-expressway
+  apis_io: https://apis.io/providers/cisco-expressway/
+  crosswalk: crosswalk/cisco-expressway.yml
+  concepts:
+  - call
+- provider: cisco-voice-portal
+  apis_io: https://apis.io/providers/cisco-voice-portal/
+  crosswalk: crosswalk/cisco-voice-portal.yml
+  concepts:
+  - call
+- provider: close
+  apis_io: https://apis.io/providers/close/
+  crosswalk: crosswalk/close.yml
+  concepts:
+  - call
+- provider: cloudtalk
+  apis_io: https://apis.io/providers/cloudtalk/
+  crosswalk: crosswalk/cloudtalk.yml
+  concepts:
+  - call
+  - recording
+  - transcription
+- provider: dialnexa
+  apis_io: https://apis.io/providers/dialnexa/
+  crosswalk: crosswalk/dialnexa.yml
+  concepts:
+  - call
+- provider: dialpad
+  apis_io: https://apis.io/providers/dialpad/
+  crosswalk: crosswalk/dialpad.yml
+  concepts:
+  - call
+  - transcription
+- provider: fixie
+  apis_io: https://apis.io/providers/fixie/
+  crosswalk: crosswalk/fixie.yml
+  concepts:
+  - call
+  - recording
+- provider: genesys
+  apis_io: https://apis.io/providers/genesys/
+  crosswalk: crosswalk/genesys.yml
+  concepts:
+  - call
+  - conference
+  - recording
+  - transcription
+- provider: infobip
+  apis_io: https://apis.io/providers/infobip/
+  crosswalk: crosswalk/infobip.yml
+  concepts:
+  - call
+  - conference
+  - recording
+- provider: justcall
+  apis_io: https://apis.io/providers/justcall/
+  crosswalk: crosswalk/justcall.yml
+  concepts:
+  - call
+- provider: kpn
+  apis_io: https://apis.io/providers/kpn/
+  crosswalk: crosswalk/kpn.yml
+  concepts:
+  - call
+- provider: messagebird
+  apis_io: https://apis.io/providers/messagebird/
+  crosswalk: crosswalk/messagebird.yml
+  concepts:
+  - call
+  - recording
+  - transcription
+- provider: nfon
+  apis_io: https://apis.io/providers/nfon/
+  crosswalk: crosswalk/nfon.yml
+  concepts:
+  - call
+- provider: phone-com
+  apis_io: https://apis.io/providers/phone-com/
+  crosswalk: crosswalk/phone-com.yml
+  concepts:
+  - call
+- provider: quo
+  apis_io: https://apis.io/providers/quo/
+  crosswalk: crosswalk/quo.yml
+  concepts:
+  - call
+  - recording
+- provider: saperly
+  apis_io: https://apis.io/providers/saperly/
+  crosswalk: crosswalk/saperly.yml
+  concepts:
+  - call
+  - recording
+  - transcription
+- provider: sarj-ai-developer-api
+  apis_io: https://apis.io/providers/sarj-ai-developer-api/
+  crosswalk: crosswalk/sarj-ai-developer-api.yml
+  concepts:
+  - call
+  - recording
+  - transcription
+- provider: signalwire
+  apis_io: https://apis.io/providers/signalwire/
+  crosswalk: crosswalk/signalwire.yml
+  concepts:
+  - call
+  - conference
+  - recording
+  - transcription
+- provider: sinch
+  apis_io: https://apis.io/providers/sinch/
+  crosswalk: crosswalk/sinch.yml
+  concepts:
+  - call
+- provider: slng
+  apis_io: https://apis.io/providers/slng/
+  crosswalk: crosswalk/slng.yml
+  concepts:
+  - call
+- provider: sonetel
+  apis_io: https://apis.io/providers/sonetel/
+  crosswalk: crosswalk/sonetel.yml
+  concepts:
+  - call
+- provider: speko
+  apis_io: https://apis.io/providers/speko/
+  crosswalk: crosswalk/speko.yml
+  concepts:
+  - call
+  - recording
+  - transcription
+- provider: spruce-health
+  apis_io: https://apis.io/providers/spruce-health/
+  crosswalk: crosswalk/spruce-health.yml
+  concepts:
+  - call
+  - transcription
+- provider: synthflow
+  apis_io: https://apis.io/providers/synthflow/
+  crosswalk: crosswalk/synthflow.yml
+  concepts:
+  - call
+- provider: telesign
+  apis_io: https://apis.io/providers/telesign/
+  crosswalk: crosswalk/telesign.yml
+  concepts:
+  - call
+- provider: teliax
+  apis_io: https://apis.io/providers/teliax/
+  crosswalk: crosswalk/teliax.yml
+  concepts:
+  - call
+- provider: telnyx
+  apis_io: https://apis.io/providers/telnyx/
+  crosswalk: crosswalk/telnyx.yml
+  concepts:
+  - call
+  - conference
+  - recording
+  - transcription
+- provider: the-mobile-first-company
+  apis_io: https://apis.io/providers/the-mobile-first-company/
+  crosswalk: crosswalk/the-mobile-first-company.yml
+  concepts:
+  - call
+- provider: thoughtly
+  apis_io: https://apis.io/providers/thoughtly/
+  crosswalk: crosswalk/thoughtly.yml
+  concepts:
+  - call
+- provider: twilio
+  apis_io: https://apis.io/providers/twilio/
+  crosswalk: crosswalk/twilio.yml
+  concepts:
+  - call
+  - conference
+  - recording
+  - transcription
+- provider: unifonic
+  apis_io: https://apis.io/providers/unifonic/
+  crosswalk: crosswalk/unifonic.yml
+  concepts:
+  - call
+- provider: vapi
+  apis_io: https://apis.io/providers/vapi/
+  crosswalk: crosswalk/vapi.yml
+  concepts:
+  - call
+- provider: vapi-ai
+  apis_io: https://apis.io/providers/vapi-ai/
+  crosswalk: crosswalk/vapi-ai.yml
+  concepts:
+  - call
+- provider: vocode
+  apis_io: https://apis.io/providers/vocode/
+  crosswalk: crosswalk/vocode.yml
+  concepts:
+  - call
+  - recording
+- provider: voygr
+  apis_io: https://apis.io/providers/voygr/
+  crosswalk: crosswalk/voygr.yml
+  concepts:
+  - call
+- provider: wazo
+  apis_io: https://apis.io/providers/wazo/
+  crosswalk: crosswalk/wazo.yml
+  concepts:
+  - call
+  - conference
+  - recording
+  - transcription
+- provider: webex
+  apis_io: https://apis.io/providers/webex/
+  crosswalk: crosswalk/webex.yml
+  concepts:
+  - call
+  - conference
+  - recording
+- provider: zoom-phone
+  apis_io: https://apis.io/providers/zoom-phone/
+  crosswalk: crosswalk/zoom-phone.yml
+  concepts:
+  - call
+  - recording

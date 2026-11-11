@@ -1,0 +1,22 @@
+provider: voygr
+apis_io: https://apis.io/providers/voygr/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at:
+      - started_at
+      - created_at
+      ended_at: ended_at
+      call_id:
+      - call_id
+      - call_sid
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/voygr-calls-api-openapi.json#GET /calls
+    - openapi/_original/voygr-calls-api-openapi.json#GET /calls/{call_id}
+    - openapi/_original/voygr-calls-api-openapi.json#POST /calls

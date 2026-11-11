@@ -1,0 +1,104 @@
+provider: twilio
+apis_io: https://apis.io/providers/twilio/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at:
+      - start_time
+      - date_created
+      id: sid
+      direction: direction
+      from:
+      - from
+      - from_formatted
+      to:
+      - to
+      - to_formatted
+      ended_at: end_time
+      call_id: parent_call_sid
+      duration: duration
+      updated_at: date_updated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/twilio-voice-openapi.yml#DELETE /Accounts/{AccountSid}/Calls/{CallSid}.json
+    - openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Calls.json
+    - openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Calls/{CallSid}.json
+    - openapi/_original/twilio-voice-openapi.yml#POST /Accounts/{AccountSid}/Calls.json
+    - openapi/_original/twilio-voice-openapi.yml#POST /Accounts/{AccountSid}/Calls/{CallSid}.json
+  recording:
+    path_segment:
+    - recordings
+    - recording
+    properties:
+      id: sid
+      created_at: date_created
+      duration: duration
+      status: status
+      call_id: call_sid
+      updated_at: date_updated
+      channels: channels
+      account_sid: account_sid
+      conference_sid: conference_sid
+      price: price
+      price_unit: price_unit
+      source: source
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/trunking-openapi-original.yml#GET /v1/Trunks/{TrunkSid}/Recording
+    - openapi/_original/trunking-openapi-original.yml#POST /v1/Trunks/{TrunkSid}/Recording
+    - openapi/_original/twilio-video-openapi.yml#DELETE /Recordings/{RecordingSid}
+    - openapi/_original/twilio-video-openapi.yml#GET /Recordings/{RecordingSid}
+    - openapi/_original/twilio-video-openapi.yml#GET /Rooms/{RoomSid}/Recordings
+  transcription:
+    path_segment:
+    - transcripts
+    - transcriptions
+    properties:
+      id:
+      - sid
+      - id
+      created_at:
+      - date_created
+      - createdAt
+      status: status
+      language: language_code
+      updated_at:
+      - date_updated
+      - updatedAt
+      duration: duration
+      account_sid: account_sid
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/intelligence-openapi-original.yml#DELETE /v2/Transcripts/{Sid}
+    - openapi/_original/intelligence-openapi-original.yml#GET /v2/Transcripts
+    - openapi/_original/intelligence-openapi-original.yml#GET /v2/Transcripts/{Sid}
+    - openapi/_original/intelligence-openapi-original.yml#POST /v2/Transcripts
+    - openapi/_original/voice-v3-openapi-original.yml#GET /v3/Transcriptions
+  conference:
+    path_segment:
+    - conferences
+    properties:
+      id: sid
+      status: status
+      created_at:
+      - create_time
+      - start_time
+      - date_created
+      account_sid: account_sid
+      friendly_name: friendly_name
+      region: region
+      subresource_uris: subresource_uris
+      updated_at: date_updated
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/insights-openapi-original.yml#GET /v1/Conferences
+    - openapi/_original/insights-openapi-original.yml#GET /v1/Conferences/{ConferenceSid}
+    - openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Conferences.json
+    - openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Conferences/{ConferenceSid}.json
+    - openapi/_original/twilio-voice-openapi.yml#POST /Accounts/{AccountSid}/Conferences/{ConferenceSid}.json

@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/telephony/main/schema/recording.json",
+  "title": "Recording",
+  "description": "The common recording in Telephony, distilled from 14 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.857,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "id",
+        "sid",
+        "recordingId"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.714,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "startTime",
+        "date_created",
+        "createdAt",
+        "start_time",
+        "created_at",
+        "created",
+        "started_at",
+        "createTime"
+      ],
+      "format": "date-time"
+    },
+    "duration": {
+      "type": "integer",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.714,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "duration",
+        "durationSeconds"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.643,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "status"
+      ]
+    },
+    "format": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.429,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "format",
+        "fileFormat",
+        "contentType"
+      ]
+    },
+    "call_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.357,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "call_sid",
+        "callId",
+        "call_id"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.357,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "date_updated",
+        "updatedAt",
+        "updated_at"
+      ],
+      "format": "date-time"
+    },
+    "channels": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.286,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "channels"
+      ]
+    },
+    "end_time": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.286,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "endTime",
+        "end_time"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.286,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "mediaUrl",
+        "media_url",
+        "downloadUrl",
+        "download_url",
+        "file_url"
+      ]
+    },
+    "account_sid": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "account_sid"
+      ]
+    },
+    "conference_sid": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "conference_sid"
+      ]
+    },
+    "page_size": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "page_size"
+      ]
+    },
+    "price": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "price"
+      ]
+    },
+    "price_unit": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "price_unit"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "source"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "type"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "telephony",
+    "concept": "recording",
+    "providers": 14,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,55 @@
+provider: infobip
+apis_io: https://apis.io/providers/infobip/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status:
+      - state
+      - status
+      created_at: startTime
+      id: id
+      direction: direction
+      from: from
+      to: to
+      ended_at: endTime
+      call_id: callId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/infobip-platform-full-openapi.json#DELETE /calls/1/recordings/calls/{callId}
+    - openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/calls
+    - openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/calls/{callId}
+    - openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/recordings/calls
+    - openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/recordings/calls/{callId}
+  recording:
+    path_segment:
+    - recordings
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/infobip-platform-full-openapi.json#DELETE /call-link/1/recordings/{id}
+    - openapi/_original/infobip-platform-full-openapi.json#DELETE /callrouting/1/recordings
+    - openapi/_original/infobip-platform-full-openapi.json#DELETE /webrtc/1/recordings/{id}
+    - openapi/_original/infobip-platform-full-openapi.json#GET /call-link/1/recordings
+    - openapi/_original/infobip-platform-full-openapi.json#GET /callrouting/1/recordings
+  conference:
+    path_segment:
+    - conferences
+    properties:
+      id: conferenceId
+      status:
+      - state
+      - status
+      created_at: startTime
+      name: name
+      call_id: callId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/infobip-platform-full-openapi.json#DELETE /calls/1/recordings/conferences/{conferenceId}
+    - openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/conferences
+    - openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/conferences/{conferenceId}
+    - openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/recordings/conferences
+    - openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/recordings/conferences/{conferenceId}

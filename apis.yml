@@ -1,0 +1,54 @@
+aid: common-telephony
+name: Telephony
+type: Common
+description: 'The common Telephony vocabulary, distilled from the harvested OpenAPI of 146 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Telephony
+- VoIP
+- Cloud Telephony
+- IVR
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/telephony/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-telephony:telephony
+  name: Common Telephony Interface
+  description: The Telephony interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/telephony
+  tags:
+  - Telephony
+  - VoIP
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/telephony/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/telephony/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/telephony/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: call
+    url: https://raw.githubusercontent.com/api-commons/telephony/main/schema/call.json
+  - type: JSONSchema
+    name: recording
+    url: https://raw.githubusercontent.com/api-commons/telephony/main/schema/recording.json
+  - type: JSONSchema
+    name: transcription
+    url: https://raw.githubusercontent.com/api-commons/telephony/main/schema/transcription.json
+  - type: JSONSchema
+    name: conference
+    url: https://raw.githubusercontent.com/api-commons/telephony/main/schema/conference.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/telephony/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

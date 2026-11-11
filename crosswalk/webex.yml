@@ -1,0 +1,49 @@
+provider: webex
+apis_io: https://apis.io/providers/webex/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: state
+      created_at: created
+      id: id
+      call_id: callId
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/calls
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/calls/members/me/calls
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/calls/members/me/calls/{callId}
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/calls/{callId}
+    - openapi/_original/webex-cloud-calling-openapi.yml#GET /telephony/calls
+  recording:
+    path_segment:
+    - recordings
+    properties:
+      id: id
+      created_at: createTime
+      duration: durationSeconds
+      status: status
+      format: format
+      url: downloadUrl
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/webex-admin-openapi.json#DELETE /admin/recordings/{recordingId}
+    - openapi/_original/webex-admin-openapi.json#DELETE /recordings/{recordingId}
+    - openapi/_original/webex-admin-openapi.json#GET /admin/recordings
+    - openapi/_original/webex-admin-openapi.json#GET /group/recordings
+    - openapi/_original/webex-admin-openapi.json#GET /group/recordings/{recordingId}
+  conference:
+    path_segment:
+    - conference
+    properties:
+      call_id: callId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/webex-cloud-calling-openapi.json#DELETE /telephony/conference
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/conference
+    - openapi/_original/webex-cloud-calling-openapi.json#POST /telephony/conference
+    - openapi/_original/webex-cloud-calling-openapi.yml#DELETE /telephony/conference
+    - openapi/_original/webex-cloud-calling-openapi.yml#DELETE /telephony/conference/members/me/conference

@@ -1,0 +1,39 @@
+provider: agentphone
+apis_io: https://apis.io/providers/agentphone/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at: startedAt
+      id: id
+      from: fromNumber
+      to: toNumber
+      ended_at: endedAt
+      duration: durationSeconds
+      agent_id: agentId
+      phone_number: phoneNumber
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/agentphone-openapi-original.json#GET /v1/agents/{agent_id}/calls
+    - openapi/_original/agentphone-openapi-original.json#GET /v1/calls
+    - openapi/_original/agentphone-openapi-original.json#GET /v1/calls/{call_id}
+    - openapi/_original/agentphone-openapi-original.json#GET /v1/numbers/{number_id}/calls
+    - openapi/_original/agentphone-openapi-original.json#POST /v1/calls
+  recording:
+    path_segment:
+    - recording
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agentphone-openapi-original.json#GET /v1/calls/{call_id}/recording
+  transcription:
+    path_segment:
+    - transcript
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agentphone-openapi-original.json#GET /v1/calls/{call_id}/transcript

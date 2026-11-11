@@ -1,0 +1,325 @@
+openapi: 3.1.0
+info:
+  title: Telephony (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Telephony interface, distilled from the harvested OpenAPI of 146 providers in the APIs.io
+    catalog. Not a product: no one serves this API. It is the shape the market already shares, measured, so that
+    providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /calls:
+    get:
+      operationId: listCalls
+      summary: List calls
+      tags:
+      - Calls
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Call'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCall
+      summary: Create a call
+      tags:
+      - Calls
+      x-commons-tier: core
+      x-commons-share: 0.755
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /calls/{call_id}:
+    parameters:
+    - $ref: '#/components/parameters/call_id'
+    get:
+      operationId: getCall
+      summary: Get a call
+      tags:
+      - Calls
+      x-commons-tier: core
+      x-commons-share: 0.755
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    delete:
+      operationId: deleteCall
+      summary: Delete a call
+      tags:
+      - Calls
+      x-commons-tier: extended
+      x-commons-share: 0.306
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /recordings:
+    get:
+      operationId: listRecordings
+      summary: List recordings
+      tags:
+      - Recordings
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Recording'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /recordings/{recording_id}:
+    parameters:
+    - $ref: '#/components/parameters/recording_id'
+    get:
+      operationId: getRecording
+      summary: Get a recording
+      tags:
+      - Recordings
+      x-commons-tier: core
+      x-commons-share: 0.524
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    delete:
+      operationId: deleteRecording
+      summary: Delete a recording
+      tags:
+      - Recordings
+      x-commons-tier: extended
+      x-commons-share: 0.429
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+  /transcriptions:
+    get:
+      operationId: listTranscriptions
+      summary: List transcriptions
+      tags:
+      - Transcriptions
+      x-commons-tier: core
+      x-commons-share: 0.833
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Transcription'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createTranscription
+      summary: Create a transcription
+      tags:
+      - Transcriptions
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /transcriptions/{transcription_id}:
+    parameters:
+    - $ref: '#/components/parameters/transcription_id'
+    get:
+      operationId: getTranscription
+      summary: Get a transcription
+      tags:
+      - Transcriptions
+      x-commons-tier: extended
+      x-commons-share: 0.278
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /conferences:
+    get:
+      operationId: listConferences
+      summary: List conferences
+      tags:
+      - Conferences
+      x-commons-tier: core
+      x-commons-share: 0.875
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Conference'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createConference
+      summary: Create a conference
+      tags:
+      - Conferences
+      x-commons-tier: core
+      x-commons-share: 0.625
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /conferences/{conference_id}:
+    parameters:
+    - $ref: '#/components/parameters/conference_id'
+    get:
+      operationId: getConference
+      summary: Get a conference
+      tags:
+      - Conferences
+      x-commons-tier: core
+      x-commons-share: 0.75
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    delete:
+      operationId: deleteConference
+      summary: Delete a conference
+      tags:
+      - Conferences
+      x-commons-tier: extended
+      x-commons-share: 0.375
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updateConference
+      summary: Update a conference
+      tags:
+      - Conferences
+      x-commons-tier: extended
+      x-commons-share: 0.375
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+components:
+  schemas:
+    Call:
+      $ref: ./schema/call.json
+    Recording:
+      $ref: ./schema/recording.json
+    Transcription:
+      $ref: ./schema/transcription.json
+    Conference:
+      $ref: ./schema/conference.json
+  parameters:
+    call_id:
+      name: call_id
+      in: path
+      required: true
+      schema:
+        type: string
+    recording_id:
+      name: recording_id
+      in: path
+      required: true
+      schema:
+        type: string
+    transcription_id:
+      name: transcription_id
+      in: path
+      required: true
+      schema:
+        type: string
+    conference_id:
+      name: conference_id
+      in: path
+      required: true
+      schema:
+        type: string

@@ -1,0 +1,50 @@
+provider: messagebird
+apis_io: https://apis.io/providers/messagebird/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at: createdAt
+      id: id
+      from: source
+      to: destination
+      ended_at: endedAt
+      updated_at: updatedAt
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/messagebird-voice-calling-openapi.yml#DELETE /calls/{callId}
+    - openapi/_original/messagebird-voice-calling-openapi.yml#GET /calls
+    - openapi/_original/messagebird-voice-calling-openapi.yml#GET /calls/{callId}
+    - openapi/_original/messagebird-voice-calling-openapi.yml#POST /calls
+  recording:
+    path_segment:
+    - recordings
+    properties:
+      id: id
+      created_at: createdAt
+      duration: duration
+      status: status
+      format: format
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/messagebird-voice-calling-openapi.yml#DELETE /recordings/{recordingId}
+    - openapi/_original/messagebird-voice-calling-openapi.yml#GET /calls/{callId}/legs/{legId}/recordings
+    - openapi/_original/messagebird-voice-calling-openapi.yml#GET /recordings/{recordingId}
+  transcription:
+    path_segment:
+    - transcriptions
+    properties:
+      id: id
+      created_at: createdAt
+      status: status
+      language: language
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/messagebird-voice-calling-openapi.yml#GET /recordings/{recordingId}/transcriptions
+    - openapi/_original/messagebird-voice-calling-openapi.yml#POST /recordings/{recordingId}/transcriptions

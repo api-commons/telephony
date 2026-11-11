@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/telephony/main/schema/conference.json",
+  "title": "Conference",
+  "description": "The common conference in Telephony, distilled from 8 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.75,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "sid",
+        "id",
+        "conferenceId"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.625,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "date_created",
+        "created_at",
+        "startTime",
+        "create_time",
+        "start_time"
+      ],
+      "format": "date-time"
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "name"
+      ]
+    },
+    "account_sid": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "account_sid"
+      ]
+    },
+    "call_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "callId"
+      ]
+    },
+    "friendly_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "friendly_name"
+      ]
+    },
+    "region": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "region"
+      ]
+    },
+    "subresource_uris": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "subresource_uris"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "date_updated",
+        "updated_at"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "telephony",
+    "concept": "conference",
+    "providers": 8,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

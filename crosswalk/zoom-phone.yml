@@ -1,0 +1,49 @@
+provider: zoom-phone
+apis_io: https://apis.io/providers/zoom-phone/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - call_logs
+    properties:
+      id: id
+      direction:
+      - call_type
+      - direction
+      from:
+      - from
+      - caller_number
+      - caller
+      to:
+      - to
+      - callee
+      call_id: call_id
+      duration: duration
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/users/{userId}/call_logs/{callLogId}
+    - openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_logs
+    - openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_logs/{callLogId}
+    - openapi/_original/zoom-phone-api-openapi.json#GET /phone/metrics/call_logs
+    - openapi/_original/zoom-phone-api-openapi.json#GET /phone/metrics/call_logs/{call_id}
+  recording:
+    path_segment:
+    - recordings
+    - recording
+    properties:
+      id: id
+      duration: duration
+      call_id: call_id
+      end_time: end_time
+      url:
+      - download_url
+      - file_url
+      page_size: page_size
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/recordings/{recordingId}
+    - openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_element/{callElementId}/recording
+    - openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_logs/{id}/recordings
+    - openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_queues/{callQueueId}/recordings
+    - openapi/_original/zoom-phone-api-openapi.json#GET /phone/recordings

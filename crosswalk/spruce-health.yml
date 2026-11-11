@@ -1,0 +1,24 @@
+provider: spruce-health
+apis_io: https://apis.io/providers/spruce-health/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/spruce-health-internal-endpoints-openapi.yml#POST /internalendpoints/{internalEndpointId}/calls
+    - openapi/_original/spruce-health-openapi.json#POST /internalendpoints/{internalEndpointId}/calls
+  transcription:
+    path_segment:
+    - transcriptions
+    properties:
+      id: id
+      status: status
+      text: text
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/spruce-health-openapi.json#GET /transcriptions/{transcriptionId}
+    - openapi/_original/spruce-health-transcription-openapi.yml#GET /transcriptions/{transcriptionId}

@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/telephony/main/schema/call.json",
+  "title": "Call",
+  "description": "The common call in Telephony, distilled from 47 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.723,
+      "x-commons-providers": 34,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.66,
+      "x-commons-providers": 31,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "start_time",
+        "startTime",
+        "started_at",
+        "date_created",
+        "created",
+        "startedAt"
+      ],
+      "format": "date-time"
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.66,
+      "x-commons-providers": 31,
+      "x-commons-spellings": [
+        "id",
+        "uuid",
+        "sid"
+      ]
+    },
+    "direction": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.574,
+      "x-commons-providers": 27,
+      "x-commons-spellings": [
+        "direction",
+        "type",
+        "CallType",
+        "_type",
+        "call_direction",
+        "call_type"
+      ]
+    },
+    "from": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.532,
+      "x-commons-providers": 25,
+      "x-commons-spellings": [
+        "from",
+        "source",
+        "callerId",
+        "caller",
+        "from_formatted",
+        "caller_id",
+        "from_number",
+        "fromNumber"
+      ]
+    },
+    "to": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.489,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "to",
+        "destination",
+        "callee",
+        "to_formatted",
+        "to_number",
+        "toNumber",
+        "calledNumber",
+        "To"
+      ]
+    },
+    "ended_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.426,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "endedAt",
+        "end_time",
+        "endTime",
+        "ended_at",
+        "ended",
+        "completedAt",
+        "hangup_time"
+      ],
+      "format": "date-time"
+    },
+    "call_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.404,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "callId",
+        "call_id",
+        "call_sid",
+        "parent_call_sid",
+        "CallId"
+      ]
+    },
+    "duration": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.362,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "duration",
+        "duration_seconds",
+        "durationSeconds",
+        "duration_ms",
+        "call_duration",
+        "Duration"
+      ]
+    },
+    "agent_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.319,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "agent_id",
+        "agentId",
+        "user_id",
+        "extension",
+        "agent",
+        "userId"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.277,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "updatedAt",
+        "date_updated",
+        "updated_at",
+        "updated"
+      ],
+      "format": "date-time"
+    },
+    "phone_number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.234,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "phone_number",
+        "phoneNumber"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.213,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "metadata",
+        "tags",
+        "custom_fields",
+        "attributes"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "telephony",
+    "concept": "call",
+    "providers": 47,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

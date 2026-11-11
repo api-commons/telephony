@@ -1,0 +1,5817 @@
+{
+ "cohort_size": 146,
+ "unreadable": [],
+ "concepts": {
+  "call": {
+   "46elks": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "from": "string",
+     "to": "string",
+     "state": "string",
+     "direction": "string",
+     "created": "string"
+    },
+    "evidence": [
+     "openapi/_original/46elks-openapi.yml#GET /calls",
+     "openapi/_original/46elks-openapi.yml#GET /calls/{id}",
+     "openapi/_original/46elks-openapi.yml#POST /calls"
+    ]
+   },
+   "8x8": {
+    "segments": [
+     "calls",
+     "call-logs"
+    ],
+    "operations": [
+     "DELETE collection",
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "reasons": "array",
+     "message": "string",
+     "agentId": "string",
+     "prefix": "number",
+     "number": "number",
+     "callerId": "number",
+     "dialplanId": "number",
+     "queueId": "number",
+     "extTransactionData": "array",
+     "ctlUserData": "array",
+     "forceCall": "boolean",
+     "callId": "string",
+     "workGroup": "object",
+     "caller": "object",
+     "latestCallee": "object",
+     "status": "string",
+     "outcome": "string",
+     "labels": "array",
+     "startTime": "integer",
+     "stopTime": "integer",
+     "connectedTime": "integer",
+     "handlingDuration": "number",
+     "waitingDuration": "number",
+     "talkingDuration": "number",
+     "onHoldDuration": "number",
+     "totalDuration": "number",
+     "did": "string",
+     "direction": "string",
+     "resolution": "string",
+     "rootCallId": "string",
+     "callee": "object",
+     "sequence": "integer",
+     "statusEnterTime": "number",
+     "statusDuration": "number",
+     "reference": "string"
+    },
+    "evidence": [
+     "openapi/_original/8x8-actions-events-contact-center-call-api.json#DELETE /tenants/{tenantId}/agents/{agentId}/calls",
+     "openapi/_original/8x8-actions-events-contact-center-call-api.json#DELETE /tenants/{tenantId}/calls/{interactionId}",
+     "openapi/_original/8x8-actions-events-contact-center-call-api.json#POST /tenants/{tenantId}/calls",
+     "openapi/_original/8x8-analytics-work-analytics.json#GET /v2/pbxes/{pbxId}/calls",
+     "openapi/_original/8x8-analytics-work-analytics.json#GET /v2/pbxes/{pbxId}/calls/{callId}",
+     "openapi/_original/8x8-connect-video-interaction-api.json#GET /api/v1/call-logs",
+     "openapi/_original/8x8-connect-video-interaction-api.json#GET /api/v1/calls/{id}"
+    ]
+   },
+   "africastalking": {
+    "segments": [
+     "call"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "phoneNumber": "string",
+     "status": "string",
+     "sessionId": "string"
+    },
+    "evidence": [
+     "openapi/_original/africastalking-openapi.yml#POST /call"
+    ]
+   },
+   "agentphone": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "agentId": [
+      "string",
+      "null"
+     ],
+     "phoneNumberId": [
+      "string",
+      "null"
+     ],
+     "phoneNumber": [
+      "string",
+      "null"
+     ],
+     "fromNumber": "string",
+     "toNumber": "string",
+     "status": "string",
+     "startedAt": "string",
+     "endedAt": [
+      "string",
+      "null"
+     ],
+     "durationSeconds": [
+      "integer",
+      "null"
+     ],
+     "lastTranscriptSnippet": [
+      "string",
+      "null"
+     ],
+     "fromNumberId": [
+      "string",
+      "null"
+     ],
+     "initialGreeting": [
+      "string",
+      "null"
+     ],
+     "voice": [
+      "string",
+      "null"
+     ],
+     "systemPrompt": [
+      "string",
+      "null"
+     ],
+     "variables": [
+      "object",
+      "null"
+     ],
+     "callScreeningIdentity": [
+      "string",
+      "null"
+     ],
+     "callScreeningPurpose": [
+      "string",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/agentphone-openapi-original.json#GET /v1/agents/{agent_id}/calls",
+     "openapi/_original/agentphone-openapi-original.json#GET /v1/calls",
+     "openapi/_original/agentphone-openapi-original.json#GET /v1/calls/{call_id}",
+     "openapi/_original/agentphone-openapi-original.json#GET /v1/numbers/{number_id}/calls",
+     "openapi/_original/agentphone-openapi-original.json#POST /v1/calls"
+    ]
+   },
+   "aircall": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/aircall-openapi.yml#GET /calls",
+     "openapi/_original/aircall-openapi.yml#GET /calls/{id}"
+    ]
+   },
+   "amigo": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "entity_id": "string",
+     "call_sid": null,
+     "direction": null,
+     "phone_number": null,
+     "caller_id": null,
+     "started_at": null,
+     "duration_seconds": null,
+     "status": null,
+     "escalation_status": null,
+     "turns": null,
+     "has_recording": null,
+     "quality_score": null,
+     "final_state": null,
+     "completion_reason": null,
+     "service_id": null,
+     "source": null,
+     "run_id": null,
+     "parent_session_id": null,
+     "fork_turn_index": null,
+     "id": "string",
+     "workspace_id": null,
+     "error": null,
+     "call_start_time": null,
+     "call_end_time": null,
+     "call_duration_seconds": "number",
+     "media_start_time": null,
+     "config": null,
+     "states_visited": "array",
+     "triggered_behaviors": "array",
+     "emotional_summary": null,
+     "forwarding": null,
+     "conference_sid": null,
+     "participants": "array",
+     "barge_in_events": "array",
+     "recording_path": null,
+     "twilio_recording_sid": null,
+     "twilio_recording_duration": null,
+     "timeline": null,
+     "verified_transcript": null,
+     "verified_words": null,
+     "transcript_accuracy": null,
+     "per_turn_accuracy": null,
+     "call_analysis": null,
+     "score": null,
+     "score_rationale": null,
+     "escalation": null,
+     "safety": null,
+     "human_segments": "array",
+     "audit": null,
+     "conversation_summary": null,
+     "safety_summary": null,
+     "period_start": "string",
+     "period_end": "string",
+     "total_calls": "integer",
+     "total_duration_seconds": "number",
+     "avg_duration_seconds": "number",
+     "calls_by_date": "array"
+    },
+    "evidence": [
+     "openapi/_original/amigo-platform-openapi-original.json#GET /v1/{workspace_id}/analytics/calls",
+     "openapi/_original/amigo-platform-openapi-original.json#GET /v1/{workspace_id}/calls",
+     "openapi/_original/amigo-platform-openapi-original.json#GET /v1/{workspace_id}/calls/{call_id}"
+    ]
+   },
+   "bandwidth": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "callId": "string",
+     "accountId": "string",
+     "applicationId": "string",
+     "to": "string",
+     "from": "string",
+     "direction": "string",
+     "state": "string",
+     "startTime": "string",
+     "answerTime": "string",
+     "endTime": "string",
+     "disconnectCause": "string",
+     "tag": "string",
+     "callUrl": "string",
+     "answerUrl": "string",
+     "answerMethod": "string",
+     "answerFallbackUrl": "string",
+     "answerFallbackMethod": "string",
+     "disconnectUrl": "string",
+     "disconnectMethod": "string",
+     "callTimeout": "number",
+     "callbackTimeout": "number",
+     "redirectUrl": "string",
+     "redirectMethod": "string",
+     "redirectFallbackUrl": "string",
+     "redirectFallbackMethod": "string"
+    },
+    "evidence": [
+     "openapi/_original/bandwidth-voice-api-openapi.yml#GET /accounts/{accountId}/calls/{callId}",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#POST /accounts/{accountId}/calls",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#POST /accounts/{accountId}/calls/{callId}"
+    ]
+   },
+   "bird": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "session_id": null,
+     "workspace_id": "string",
+     "direction": null,
+     "from": "string",
+     "to": "string",
+     "actor": null,
+     "sip_trunk_id": null,
+     "status": null,
+     "sip_response_code": [
+      "integer",
+      "null"
+     ],
+     "rejection_reason": null,
+     "route": null,
+     "tags": "array",
+     "started_at": "string",
+     "answered_at": [
+      "string",
+      "null"
+     ],
+     "ended_at": [
+      "string",
+      "null"
+     ],
+     "duration_ms": [
+      "integer",
+      "null"
+     ],
+     "pdd_ms": "integer",
+     "billable_ms": [
+      "integer",
+      "null"
+     ],
+     "media_quality": "object",
+     "cost": "object",
+     "next_cursor": [
+      "string",
+      "null"
+     ],
+     "prev_cursor": [
+      "string",
+      "null"
+     ],
+     "refresh_cursor": [
+      "string",
+      "null"
+     ],
+     "source": "string",
+     "destination": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "endedAt": "string",
+     "callFlow": "object",
+     "webhook": "object"
+    },
+    "evidence": [
+     "openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/voice/calls",
+     "openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/voice/calls/{call_id}",
+     "openapi/_original/messagebird-calls-api-openapi.yml#DELETE /calls/{callId}",
+     "openapi/_original/messagebird-calls-api-openapi.yml#GET /calls",
+     "openapi/_original/messagebird-calls-api-openapi.yml#GET /calls/{callId}",
+     "openapi/_original/messagebird-calls-api-openapi.yml#POST /calls"
+    ]
+   },
+   "bland-ai": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "call_id": "string",
+     "created_at": "string",
+     "call_length": "number",
+     "to": "string",
+     "from": "string",
+     "completed": "boolean",
+     "answered_by": "string",
+     "batch_id": "string",
+     "campaign_id": "string",
+     "status": "string",
+     "message": "string",
+     "errors": "array",
+     "phone_number": "string",
+     "task": "string",
+     "pathway_id": "string",
+     "voice": "string",
+     "first_sentence": "string",
+     "wait_for_greeting": "boolean",
+     "record": "boolean",
+     "max_duration": "integer",
+     "webhook": "string",
+     "metadata": "object",
+     "summary": "string",
+     "transcripts": "array",
+     "recording_url": "string",
+     "analysis": "object",
+     "variables": "object",
+     "price": "number"
+    },
+    "evidence": [
+     "openapi/_original/bland-ai-openapi.yml#GET /v1/calls",
+     "openapi/_original/bland-ai-openapi.yml#GET /v1/calls/{call_id}",
+     "openapi/_original/bland-ai-openapi.yml#POST /v1/calls"
+    ]
+   },
+   "callrail": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "page": "integer",
+     "per_page": "integer",
+     "total_pages": "integer",
+     "total_records": "integer",
+     "id": "string",
+     "answered": "boolean",
+     "business_phone_number": "string",
+     "customer_city": "string",
+     "customer_country": "string",
+     "customer_name": "string",
+     "customer_phone_number": "string",
+     "customer_state": "string",
+     "direction": "string",
+     "duration": "integer",
+     "recording": "string",
+     "recording_duration": "integer",
+     "start_time": "string",
+     "tracking_phone_number": "string",
+     "voicemail": "boolean",
+     "agent_email": "string",
+     "lead_status": "string",
+     "note": "string",
+     "tags": "array",
+     "source": "string",
+     "campaign": "string",
+     "medium": "string",
+     "keywords": "string",
+     "landing_page_url": "string",
+     "referrer_domain": "string",
+     "company_id": "string",
+     "company_name": "string",
+     "tracker_id": "string",
+     "caller_id": "string",
+     "recording_enabled": "boolean",
+     "spam": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/callrail-openapi.yml#GET /a/{account_id}/calls.json",
+     "openapi/_original/callrail-openapi.yml#GET /a/{account_id}/calls/{call_id}.json",
+     "openapi/_original/callrail-openapi.yml#POST /a/{account_id}/calls.json",
+     "openapi/_original/callrail-openapi.yml#PUT /a/{account_id}/calls/{call_id}.json"
+    ]
+   },
+   "cartesia-ai": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "agent_id": "string",
+     "to": "string",
+     "from": "string",
+     "status": "string",
+     "metadata": "object",
+     "created_at": "string",
+     "deleted": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/cartesia-ai-openapi.yml#DELETE /calls/{id}",
+     "openapi/_original/cartesia-ai-openapi.yml#GET /calls",
+     "openapi/_original/cartesia-ai-openapi.yml#GET /calls/{id}"
+    ]
+   },
+   "cisco-expressway": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "CallId": "string",
+     "StartTime": "string",
+     "Duration": "integer",
+     "SourceAlias": "string",
+     "DestinationAlias": "string",
+     "CallType": "string",
+     "SIPVariant": "string",
+     "Protocol": "string",
+     "Bandwidth": "integer",
+     "SourceZone": "string",
+     "DestinationZone": "string",
+     "Encrypted": "boolean",
+     "ClusterPeer": "string"
+    },
+    "evidence": [
+     "openapi/_original/cisco-expressway-status-api-openapi.yml#GET /status/common/calls"
+    ]
+   },
+   "cisco-voice-portal": {
+    "segments": [
+     "call"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "callGuid": "string",
+     "state": "string",
+     "callingNumber": "string",
+     "calledNumber": "string",
+     "startTime": "string",
+     "duration": "integer",
+     "applicationName": "string",
+     "sipCallId": "string",
+     "sipFromTag": "string",
+     "sipToTag": "string",
+     "icmRouteResult": "object",
+     "vxmlServer": "string",
+     "callHistory": "array",
+     "eccVariables": "object"
+    },
+    "evidence": [
+     "openapi/_original/cisco-voice-portal-call-control-openapi.yml#GET /call",
+     "openapi/_original/cisco-voice-portal-call-control-openapi.yml#GET /call/{callGuid}"
+    ]
+   },
+   "close": {
+    "segments": [
+     "call"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "_type": "string",
+     "activity_at": null,
+     "contact_id": null,
+     "created_by": null,
+     "created_by_name": null,
+     "date_created": "string",
+     "date_updated": "string",
+     "id": "string",
+     "lead_id": null,
+     "organization_id": "string",
+     "outcome_id": null,
+     "sequence_id": null,
+     "sequence_name": null,
+     "sequence_subscription_id": null,
+     "source": "string",
+     "status": "string",
+     "updated_by": null,
+     "updated_by_name": null,
+     "user_id": null,
+     "user_name": null,
+     "users": "array",
+     "conversation_type_id": [
+      "null",
+      "string"
+     ],
+     "direction": [
+      "null",
+      "string"
+     ],
+     "duration": [
+      "integer",
+      "null"
+     ],
+     "note": [
+      "null",
+      "string"
+     ],
+     "note_html": [
+      "null",
+      "string"
+     ],
+     "phone": [
+      "null",
+      "string"
+     ],
+     "playbook_id": [
+      "null",
+      "string"
+     ],
+     "quality_info": [
+      "null",
+      "string"
+     ],
+     "recording_url": [
+      "null",
+      "string"
+     ],
+     "voicemail_url": [
+      "null",
+      "string"
+     ],
+     "created_by_id": [
+      "string",
+      "null"
+     ],
+     "custom_fields": [
+      "object",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#DELETE /activity/call/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /activity/call/",
+     "openapi/_original/close-api-openapi.json#GET /activity/call/{id}/",
+     "openapi/_original/close-api-openapi.json#POST /activity/call/",
+     "openapi/_original/close-api-openapi.json#PUT /activity/call/{id}/",
+     "openapi/_original/close-openapi.yml#DELETE /activity/call/{id}/",
+     "openapi/_original/close-openapi.yml#GET /activity/call/",
+     "openapi/_original/close-openapi.yml#GET /activity/call/{id}/",
+     "openapi/_original/close-openapi.yml#POST /activity/call/",
+     "openapi/_original/close-openapi.yml#PUT /activity/call/{id}/"
+    ]
+   },
+   "cloudtalk": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "cdr_id": "number",
+     "uuid": "string",
+     "company_id": "number",
+     "date": "string",
+     "contact": "object",
+     "call_tags": "array",
+     "call_rating": "number",
+     "internal_number": "object",
+     "call_times": "object",
+     "direction": "string",
+     "type": "string",
+     "status": "string",
+     "call_steps": "array",
+     "notes": "array",
+     "recorded": "boolean",
+     "out_of_office": "boolean",
+     "call_number": "string",
+     "voice_agent_id": "string",
+     "call_properties": "object"
+    },
+    "evidence": [
+     "openapi/_original/cloudtalk-openapi.json#GET /calls/{callId}",
+     "openapi/_original/cloudtalk-openapi.json#POST /voice-agent/calls"
+    ]
+   },
+   "dialnexa": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "to_phone_number": "string",
+     "agent_id": "string",
+     "agent_version_number": "number",
+     "phone_number": "string",
+     "metadata": "object",
+     "notes": "object"
+    },
+    "evidence": [
+     "openapi/_original/dialnexa-api-openapi.yml#GET /v1/calls",
+     "openapi/_original/dialnexa-api-openapi.yml#GET /v1/calls/{id}",
+     "openapi/_original/dialnexa-api-openapi.yml#POST /v1/calls",
+     "openapi/_original/dialnexa-openapi.json#GET /v1/calls",
+     "openapi/_original/dialnexa-openapi.json#GET /v1/calls/{id}",
+     "openapi/_original/dialnexa-openapi.json#POST /v1/calls"
+    ]
+   },
+   "dialpad": {
+    "segments": [
+     "call",
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dialpad-openapi.yml#GET /call/{id}",
+     "openapi/_original/dialpad-openapi.yml#GET /calls",
+     "openapi/_original/dialpad-openapi.yml#POST /call",
+     "openapi/_original/dialpad-openapi.yml#POST /users/{id}/call"
+    ]
+   },
+   "fixie": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "allTime": null,
+     "daily": "array",
+     "hourly": "array",
+     "callId": "string",
+     "clientVersion": "string",
+     "created": "string",
+     "joined": "string",
+     "ended": "string",
+     "endReason": null,
+     "billedDuration": "string",
+     "billedSideInputTokens": "integer",
+     "billedSideOutputTokens": "integer",
+     "billingStatus": null,
+     "firstSpeaker": null,
+     "firstSpeakerSettings": null,
+     "inactivityMessages": "array",
+     "initialOutputMedium": null,
+     "joinTimeout": "string",
+     "joinUrl": "string",
+     "languageHint": "string",
+     "maxDuration": "string",
+     "medium": null,
+     "model": "string",
+     "recordingEnabled": "boolean",
+     "retentionPolicy": null,
+     "systemPrompt": "string",
+     "temperature": "number",
+     "timeExceededMessage": "string",
+     "voice": "string",
+     "externalVoice": "object",
+     "voiceOverrides": null,
+     "transcriptOptional": "boolean",
+     "vadSettings": null,
+     "shortSummary": "string",
+     "summary": "string",
+     "agent": null,
+     "agentId": "string",
+     "experimentalSettings": null,
+     "metadata": "object",
+     "initialState": "object",
+     "requestContext": null,
+     "dataConnectionConfig": null,
+     "callbacks": null,
+     "sipDetails": null,
+     "templateContext": "object",
+     "initialMessages": "array",
+     "dataConnection": null,
+     "toolOverrides": null,
+     "sharedSecrets": "array",
+     "selectedTools": "array"
+    },
+    "evidence": [
+     "openapi/_original/fixie-ultravox-openapi-original.yml#DELETE /api/calls/{call_id}",
+     "openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/accounts/me/usage/calls",
+     "openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/agents/{agent_id}/calls",
+     "openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/calls",
+     "openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/calls/{call_id}",
+     "openapi/_original/fixie-ultravox-openapi-original.yml#POST /api/agents/{agent_id}/calls",
+     "openapi/_original/fixie-ultravox-openapi-original.yml#POST /api/calls"
+    ]
+   },
+   "genesys": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "entities": "array",
+     "pageSize": "integer",
+     "pageNumber": "integer",
+     "total": "integer",
+     "firstUri": "string",
+     "nextUri": "string",
+     "previousUri": "string",
+     "lastUri": "string",
+     "selfUri": "string",
+     "pageCount": "integer",
+     "id": "string",
+     "name": "string",
+     "phoneNumber": "string",
+     "callerId": "string",
+     "callerIdName": "string",
+     "callFromQueueId": "string",
+     "callQueueId": "string",
+     "callUserId": "string",
+     "priority": "integer",
+     "attributes": "object",
+     "languageId": "string",
+     "routingSkillsIds": "array",
+     "routingSkillExpression": "string",
+     "conversationIds": "array",
+     "participants": "array",
+     "uuiData": "string",
+     "externalContactId": "string",
+     "label": "string",
+     "otherMediaUris": "array",
+     "recentTransfers": "array",
+     "utilizationLabelId": "string",
+     "inactivityTimeout": "string",
+     "divisions": "array",
+     "recordingState": "string",
+     "maxParticipants": "integer",
+     "securePause": "boolean",
+     "externalTag": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "address": "string",
+     "state": "string",
+     "callNumber": "string",
+     "phoneColumn": "string"
+    },
+    "evidence": [
+     "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/calls",
+     "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/calls/{conversationId}",
+     "openapi/_original/genesys-platform-api-openapi-original.json#PATCH /api/v2/conversations/calls/{conversationId}",
+     "openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/conversations/calls",
+     "openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/conversations/calls/{conversationId}"
+    ]
+   },
+   "infobip": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "endpoint": "object",
+     "from": "string",
+     "to": "string",
+     "direction": "string",
+     "state": "string",
+     "media": "object",
+     "startTime": "string",
+     "answerTime": "string",
+     "endTime": "string",
+     "parentCallId": "string",
+     "machineDetection": "object",
+     "ringDuration": "integer",
+     "callsConfigurationId": "string",
+     "platform": "object",
+     "conferenceId": "string",
+     "customData": "object",
+     "dialogId": "string",
+     "externalId": "string",
+     "fromDisplayName": "string",
+     "connectTimeout": "integer",
+     "recording": "object",
+     "maxDuration": "integer",
+     "callId": "string",
+     "files": "array",
+     "status": "string",
+     "reason": "string",
+     "callingAllowed": "boolean",
+     "callingSettings": "object"
+    },
+    "evidence": [
+     "openapi/_original/infobip-platform-full-openapi.json#DELETE /calls/1/recordings/calls/{callId}",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/calls",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/calls/{callId}",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/recordings/calls",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/recordings/calls/{callId}",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /whatsapp/1/senders/{sender}/calls",
+     "openapi/_original/infobip-platform-full-openapi.json#POST /calls/1/calls",
+     "openapi/_original/infobip-platform-openapi.json#DELETE /calls/1/recordings/calls/{callId}",
+     "openapi/_original/infobip-platform-openapi.json#GET /calls/1/calls",
+     "openapi/_original/infobip-platform-openapi.json#GET /calls/1/calls/{callId}",
+     "openapi/_original/infobip-platform-openapi.json#GET /calls/1/recordings/calls",
+     "openapi/_original/infobip-platform-openapi.json#GET /calls/1/recordings/calls/{callId}"
+    ]
+   },
+   "justcall": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "number",
+     "call_sid": "string",
+     "contact_number": "string",
+     "contact_name": "string",
+     "contact_email": "string",
+     "justcall_number": "string",
+     "justcall_line_name": "string",
+     "agent_id": "number",
+     "agent_name": "string",
+     "agent_email": "string",
+     "agent_active": "string",
+     "call_date": "string",
+     "call_user_date": "string",
+     "call_time": "string",
+     "call_user_time": "string",
+     "cost_incurred": "number",
+     "call_info": "object",
+     "call_duration": "object",
+     "ivr_info": "object",
+     "queue_callback": "object",
+     "justcall_iq": "object",
+     "queue": "object",
+     "justcall_ai": "object",
+     "notes": "string",
+     "disposition_code": "string",
+     "rating": "number",
+     "ai_agent_name": "string",
+     "ai_agent_id": "string",
+     "dynamic_variables": "array",
+     "name": "string",
+     "value": "string",
+     "type": "string",
+     "call_id": "number",
+     "contact_id": "number",
+     "sales_dialer_number": "string",
+     "campaign": "object"
+    },
+    "evidence": [
+     "openapi/_original/justcall-openapi.json#GET /v2.1/calls",
+     "openapi/_original/justcall-openapi.json#GET /v2.1/calls/{id}",
+     "openapi/_original/justcall-openapi.json#GET /v2.1/sales_dialer/calls",
+     "openapi/_original/justcall-openapi.json#GET /v2.1/sales_dialer/calls/{id}",
+     "openapi/_original/justcall-openapi.json#GET /v2/calls",
+     "openapi/_original/justcall-openapi.json#GET /v2/calls/{id}",
+     "openapi/_original/justcall-openapi.json#GET /v2/sales_dialer/calls",
+     "openapi/_original/justcall-openapi.json#GET /v2/sales_dialer/calls/{id}",
+     "openapi/_original/justcall-openapi.json#POST /v2.1/voice-agents/calls",
+     "openapi/_original/justcall-openapi.json#PUT /v2.1/calls/{id}"
+    ]
+   },
+   "kpn": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "count": "integer",
+     "page_size": "integer",
+     "record_index": "integer",
+     "_links": "object",
+     "_embedded": "object",
+     "uuid": "string",
+     "status": "string",
+     "direction": "string",
+     "conversation_uuid": "string",
+     "to": "array",
+     "from": "object",
+     "answer_url": "array",
+     "answer_method": "string",
+     "event_url": "array",
+     "event_method": "string",
+     "machine_detection": "string",
+     "length_timer": "integer",
+     "ringing_timer": "integer",
+     "rate": "string",
+     "price": "string",
+     "duration": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "network": "string",
+     "action": "string",
+     "destination": "object"
+    },
+    "evidence": [
+     "openapi/_original/vonage-voice-openapi.yml#GET /voice/calls",
+     "openapi/_original/vonage-voice-openapi.yml#GET /voice/calls/{uuid}",
+     "openapi/_original/vonage-voice-openapi.yml#POST /voice/calls",
+     "openapi/_original/vonage-voice-openapi.yml#PUT /voice/calls/{uuid}"
+    ]
+   },
+   "messagebird": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "source": "string",
+     "destination": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "endedAt": "string",
+     "callFlow": "object",
+     "webhook": "object"
+    },
+    "evidence": [
+     "openapi/_original/messagebird-voice-calling-openapi.yml#DELETE /calls/{callId}",
+     "openapi/_original/messagebird-voice-calling-openapi.yml#GET /calls",
+     "openapi/_original/messagebird-voice-calling-openapi.yml#GET /calls/{callId}",
+     "openapi/_original/messagebird-voice-calling-openapi.yml#POST /calls"
+    ]
+   },
+   "nfon": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "uuid": "string",
+     "caller": "string",
+     "caller_context": "string",
+     "caller_device": "string",
+     "caller_role": "string",
+     "callee": "string",
+     "callee_context": "string",
+     "callee_conference_uuid": "string",
+     "state": "string",
+     "updated": "string",
+     "extension": "string",
+     "customer": "string",
+     "direction": "string",
+     "timeout": "integer",
+     "error": "string"
+    },
+    "evidence": [
+     "openapi/_original/nfon-cti-api-openapi.yml#DELETE /extensions/phone/calls/{uuid}",
+     "openapi/_original/nfon-cti-api-openapi.yml#GET /extensions/phone/calls",
+     "openapi/_original/nfon-cti-api-openapi.yml#POST /extensions/phone/calls"
+    ]
+   },
+   "openphone": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "answeredAt": null,
+     "answeredBy": null,
+     "initiatedBy": null,
+     "direction": "string",
+     "status": "string",
+     "completedAt": null,
+     "createdAt": "string",
+     "callRoute": null,
+     "duration": "integer",
+     "forwardedFrom": null,
+     "forwardedTo": null,
+     "aiHandled": null,
+     "id": "string",
+     "phoneNumberId": "string",
+     "participants": "array",
+     "updatedAt": null,
+     "userId": "string",
+     "orgId": "string",
+     "label": null,
+     "url": "string",
+     "key": "string",
+     "deletedAt": null,
+     "events": "array",
+     "resourceIds": null
+    },
+    "evidence": [
+     "openapi/_original/openphone-openapi-original.json#GET /v1/calls",
+     "openapi/_original/openphone-openapi-original.json#GET /v1/calls/{callId}",
+     "openapi/_original/openphone-openapi-original.json#POST /v1/webhooks/calls"
+    ]
+   },
+   "phone-com": {
+    "segments": [
+     "call-logs",
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "filters": "object",
+     "sort": "object",
+     "total": "integer",
+     "limit": "integer",
+     "offset": "integer",
+     "items": "array",
+     "caller_phone_number": "string",
+     "caller_extension": "integer",
+     "caller_caller_id": "string",
+     "caller_private": "boolean",
+     "callee_phone_number": "string",
+     "callee_extension": "integer",
+     "callee_caller_id": "string",
+     "callee_private": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/call-logs",
+     "openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/call-logs/{id}",
+     "openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/extensions/{extension_id}/call-logs",
+     "openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/extensions/{extension_id}/call-logs/{id}",
+     "openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#POST /v4/accounts/{voip_id}/calls",
+     "openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#POST /v4/accounts/{voip_id}/extensions/{extension_id}/calls"
+    ]
+   },
+   "quo": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "answeredAt": null,
+     "answeredBy": null,
+     "initiatedBy": null,
+     "direction": "string",
+     "status": "string",
+     "completedAt": null,
+     "createdAt": "string",
+     "callRoute": null,
+     "duration": "integer",
+     "forwardedFrom": null,
+     "forwardedTo": null,
+     "aiHandled": null,
+     "id": "string",
+     "phoneNumberId": "string",
+     "participants": "array",
+     "updatedAt": null,
+     "userId": "string",
+     "orgId": "string",
+     "label": null,
+     "url": "string",
+     "key": "string",
+     "deletedAt": null,
+     "events": "array",
+     "resourceIds": null
+    },
+    "evidence": [
+     "openapi/_original/quo-public-api-v1.json#GET /v1/calls",
+     "openapi/_original/quo-public-api-v1.json#GET /v1/calls/{callId}",
+     "openapi/_original/quo-public-api-v1.json#POST /v1/webhooks/calls"
+    ]
+   },
+   "saperly": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "numberId": "string",
+     "direction": "string",
+     "to": "string",
+     "from": "string",
+     "status": "string",
+     "rateCentsPerMin": null,
+     "durationSec": null,
+     "costCents": null,
+     "hasRecording": "boolean",
+     "hasTranscript": "boolean",
+     "createdAt": "string",
+     "fromNumberId": "string",
+     "connectionId": null,
+     "instructions": null
+    },
+    "evidence": [
+     "openapi/_original/api-saperly-com-openapi.json#GET /calls",
+     "openapi/_original/api-saperly-com-openapi.json#GET /calls/{id}",
+     "openapi/_original/api-saperly-com-openapi.json#POST /calls",
+     "openapi/_original/saperly-com-openapi-bundled.json#GET /calls",
+     "openapi/_original/saperly-com-openapi-bundled.json#GET /calls/{id}",
+     "openapi/_original/saperly-com-openapi-bundled.json#POST /calls",
+     "openapi/_original/saperly-openapi.yml#GET /calls",
+     "openapi/_original/saperly-openapi.yml#GET /calls/{id}",
+     "openapi/_original/saperly-openapi.yml#POST /calls"
+    ]
+   },
+   "sarj-ai-developer-api": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "phone_number": "string",
+     "scenario_id": "string",
+     "variables": "object",
+     "language": "string",
+     "scheduled_at": null,
+     "schedule_config_id": null,
+     "id": "string",
+     "status": null,
+     "direction": null,
+     "duration": null,
+     "recording_url": null,
+     "permanent_recording_url": null,
+     "transcript": null,
+     "report": null,
+     "created_at": "string",
+     "updated_at": "string",
+     "started_at": null,
+     "ended_at": null,
+     "is_retry": "boolean",
+     "retry_attempt_number": "integer",
+     "root_call_id": null,
+     "next_retry_at": null,
+     "duration_seconds": null,
+     "user_id": "string",
+     "organization_id": "string",
+     "name": "string",
+     "display_time_zone": "string",
+     "custom_scenario_id": null,
+     "settings": null,
+     "total_calls": "integer",
+     "successful_calls": "integer",
+     "completed_calls": "integer",
+     "settled_calls": "integer",
+     "dispatch_engine": "string",
+     "report_file_key": null,
+     "signed_report_url": null,
+     "file_key": null,
+     "app_settings": null,
+     "calling_window": null,
+     "file": "object",
+     "scenario": "object",
+     "start_at": null,
+     "retry_settings": null,
+     "voices": null,
+     "sip_trunk_id": null,
+     "trunk_phone_number": null
+    },
+    "evidence": [
+     "openapi/_original/sarj-ai-developer-api-developer-openapi.json#GET /calls/{call_id}",
+     "openapi/_original/sarj-ai-developer-api-developer-openapi.json#POST /calls",
+     "openapi/_original/sarj-ai-developer-api-voice-platform-openapi.json#GET /v1/beta/scenario-insights/{scenario_insight_id}/calls",
+     "openapi/_original/sarj-ai-developer-api-voice-platform-openapi.json#POST /v1/beta/calls/batch"
+    ]
+   },
+   "signalwire": {
+    "segments": [
+     "calls",
+     "call"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "uri": "string",
+     "first_page_uri": "string",
+     "next_page_uri": null,
+     "previous_page_uri": null,
+     "page": "integer",
+     "page_size": "integer",
+     "calls": "array",
+     "sid": null,
+     "account_sid": null,
+     "date_created": "string",
+     "date_updated": "string",
+     "parent_call_sid": null,
+     "to": "string",
+     "formatted_to": "string",
+     "to_formatted": "string",
+     "from": "string",
+     "formatted_from": "string",
+     "from_formatted": "string",
+     "phone_number_sid": null,
+     "status": null,
+     "start_time": null,
+     "end_time": null,
+     "duration": "integer",
+     "price": null,
+     "price_unit": "string",
+     "direction": null,
+     "answered_by": null,
+     "api_version": "string",
+     "forwarded_from": null,
+     "caller_name": null,
+     "subresource_uris": null,
+     "annotation": null,
+     "group_sid": null,
+     "audio_in_mos": null,
+     "sip_result_code": null,
+     "audio_rtt_avg": null,
+     "audio_rtt_min": null,
+     "audio_rtt_max": null,
+     "audio_out_jitter_min": null,
+     "audio_out_jitter_max": null,
+     "audio_out_jitter_avg": null,
+     "audio_out_lost": null,
+     "id": null,
+     "source": "string",
+     "url": null,
+     "charge": "number",
+     "created_at": "string",
+     "charge_details": "array",
+     "duration_ms": null,
+     "billing_ms": null,
+     "type": null,
+     "parent_id": null,
+     "command": "string",
+     "params": null,
+     "success": "boolean",
+     "channel": "string",
+     "message": "string",
+     "token_length": "integer",
+     "valid_for": "integer",
+     "max_attempts": "integer",
+     "allow_alphas": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/signalwire-compatibility-openapi.yaml#DELETE /Accounts/{AccountSid}/Calls/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Calls",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Calls/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/Calls",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/Calls/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#DELETE /Accounts/{AccountSid}/Calls/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#GET /Accounts/{AccountSid}/Calls",
+     "openapi/_original/signalwire-compatibility-openapi.yml#GET /Accounts/{AccountSid}/Calls/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#POST /Accounts/{AccountSid}/Calls",
+     "openapi/_original/signalwire-compatibility-openapi.yml#POST /Accounts/{AccountSid}/Calls/{Sid}",
+     "openapi/_original/signalwire-rest-openapi.yaml#POST /api/calling/calls",
+     "openapi/_original/signalwire-rest-openapi.yaml#POST /api/relay/rest/mfa/call"
+    ]
+   },
+   "sinch": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "callId": "string",
+     "to": "string",
+     "from": "string",
+     "direction": "string",
+     "answerTime": "string",
+     "endTime": "string",
+     "durationSeconds": "integer",
+     "callResult": "string",
+     "pricePerMinute": null,
+     "billingDurationSeconds": "integer",
+     "price": null,
+     "createTime": "string",
+     "projectId": "string",
+     "trunkId": "string",
+     "pcapId": "string",
+     "totalItems": "integer",
+     "pageNumber": "string",
+     "size": "integer"
+    },
+    "evidence": [
+     "openapi/_original/sinch-elastic-sip-trunking-api-openapi.yaml#GET /v1/projects/{projectId}/calls"
+    ]
+   },
+   "slng": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "agent_id": "string",
+     "phone_number": "string",
+     "call_direction": "string",
+     "web_session_origin": "string",
+     "arguments": "object",
+     "rendered_prompt": "string",
+     "livekit_room_name": "string",
+     "livekit_dispatch_id": "string",
+     "call_started_at": "string",
+     "call_ended_at": "string",
+     "call_duration_ms": "integer",
+     "call_end_reason": "string",
+     "finalized_at": "string",
+     "call_duration_source": "string",
+     "status": "string",
+     "error_message": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "call_id": "string",
+     "message": "string",
+     "livekit_session_report": "object",
+     "call_events": "array",
+     "tool_executions": "array"
+    },
+    "evidence": [
+     "openapi/_original/slng-agents-openapi.yml#GET /v1/agents/{agent_id}/calls",
+     "openapi/_original/slng-agents-openapi.yml#GET /v1/agents/{agent_id}/calls/{call_id}",
+     "openapi/_original/slng-agents-openapi.yml#POST /v1/agents/{agent_id}/calls"
+    ]
+   },
+   "sonetel": {
+    "segments": [
+     "call"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "incoming": "object",
+     "outgoing": "object"
+    },
+    "evidence": [
+     "openapi/_original/7_users.yaml#GET /account/{accountid}/user/{userid}/call",
+     "openapi/_original/7_users.yaml#POST /account/{accountid}/user/{userid}/call",
+     "openapi/_original/sonetel-7-users-openapi.yml#GET /account/{accountid}/user/{userid}/call",
+     "openapi/_original/sonetel-7-users-openapi.yml#POST /account/{accountid}/user/{userid}/call",
+     "openapi/_original/sonetel-users-openapi.yml#GET /account/{accountid}/user/{userid}/call",
+     "openapi/_original/sonetel-users-openapi.yml#POST /account/{accountid}/user/{userid}/call"
+    ]
+   },
+   "speko": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "calls": "array",
+     "entries": "array",
+     "next_cursor": "string",
+     "id": "string",
+     "call_id": "string",
+     "resource_uri": "string",
+     "agent_id": "string",
+     "status": "string",
+     "kind": "string",
+     "room_name": "string",
+     "language": "string",
+     "pipeline_config": "object",
+     "metadata": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "ended_at": "string",
+     "duration_seconds": "integer",
+     "recording_status": "string",
+     "recording_duration_ms": "integer",
+     "recording_resource_uri": "string",
+     "report": "object",
+     "transfers": "array",
+     "transcript": "object",
+     "span_tree": "object"
+    },
+    "evidence": [
+     "openapi/_original/speko-openapi-original.json#GET /v1/agents/{id}/calls",
+     "openapi/_original/speko-openapi-original.json#GET /v1/calls/{id}"
+    ]
+   },
+   "spruce-health": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "proxyNumber": "string",
+     "destinationNumber": "string",
+     "originatingNumber": "string"
+    },
+    "evidence": [
+     "openapi/_original/spruce-health-internal-endpoints-openapi.yml#POST /internalendpoints/{internalEndpointId}/calls",
+     "openapi/_original/spruce-health-openapi.json#POST /internalendpoints/{internalEndpointId}/calls"
+    ]
+   },
+   "synthflow": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "status": "string",
+     "response": "object",
+     "eta": "integer",
+     "model_id": "string",
+     "phone": "string",
+     "from_phone_number": "string",
+     "name": "string",
+     "custom_variables": "array",
+     "lead_email": "string",
+     "lead_timezone": "string",
+     "prompt": "string",
+     "greeting": "string"
+    },
+    "evidence": [
+     "openapi/_original/synthflow-openapi.json#GET /calls",
+     "openapi/_original/synthflow-openapi.json#GET /calls/{call_id}",
+     "openapi/_original/synthflow-openapi.json#POST /calls"
+    ]
+   },
+   "telesign": {
+    "segments": [
+     "call"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "reference_id": "string",
+     "sub_resource": "string",
+     "errors": "array",
+     "status": "object",
+     "verify": "object",
+     "voice": "object"
+    },
+    "evidence": [
+     "openapi/_original/telesign-voice-verify-api-openapi.json#POST /v1/verify/call"
+    ]
+   },
+   "teliax": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "data": "array",
+     "error": "object",
+     "meta": "object",
+     "success": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/teliax-warp-openapi.json#GET /v1/trunks/{trunk_id}/credentials/{cred_id}/calls",
+     "openapi/_original/teliax-warp-openapi.yml#GET /v1/trunks/{trunk_id}/credentials/{cred_id}/calls"
+    ]
+   },
+   "telnyx": {
+    "segments": [
+     "calls",
+     "call"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "record_type": "string",
+     "call_session_id": "string",
+     "call_leg_id": "string",
+     "call_control_id": "string",
+     "is_alive": "boolean",
+     "client_state": "string",
+     "call_duration": "integer",
+     "recording_id": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "assistant": "object",
+     "conversation_relay_config": "object",
+     "to": null,
+     "from": "string",
+     "diversion": "string",
+     "from_display_name": "string",
+     "privacy": "string",
+     "connection_id": "string",
+     "audio_url": "string",
+     "send_digits_on_answer": "string",
+     "media_name": "string",
+     "preferred_codecs": "string",
+     "timeout_secs": "integer",
+     "retry_on_timeout": "boolean",
+     "time_limit_secs": "integer",
+     "answering_machine_detection": "string",
+     "answering_machine_detection_config": "object",
+     "deepfake_detection": "object",
+     "conference_config": "object",
+     "custom_headers": "array",
+     "billing_group_id": "string",
+     "command_id": "string",
+     "link_to": "string",
+     "bridge_intent": "boolean",
+     "bridge_on_answer": "boolean",
+     "prevent_double_bridge": "boolean",
+     "park_after_unbridge": "string",
+     "media_encryption": "string",
+     "sip_auth_username": "string",
+     "sip_auth_password": "string",
+     "sip_headers": "array",
+     "sip_transport_protocol": "string",
+     "sound_modifications": "object",
+     "stream_url": "string",
+     "stream_track": "string",
+     "stream_codec": "string",
+     "stream_bidirectional_mode": "string",
+     "stream_bidirectional_codec": "string",
+     "stream_bidirectional_target_legs": "string",
+     "stream_bidirectional_sampling_rate": "integer",
+     "stream_establish_before_call_originate": "boolean",
+     "send_silence_when_idle": "boolean",
+     "webhook_url": "string",
+     "webhook_url_method": "string",
+     "webhook_urls": "object",
+     "webhook_urls_method": "string",
+     "webhook_retries_policies": "object",
+     "record": "string",
+     "record_channels": "string",
+     "record_format": "string",
+     "record_max_length": "integer",
+     "record_timeout_secs": "integer",
+     "record_track": "string",
+     "record_trim": "string",
+     "record_custom_file_name": "string",
+     "supervise_call_control_id": "string",
+     "supervisor_role": "string",
+     "enable_dialogflow": "boolean",
+     "dialogflow_config": "object",
+     "transcription": "boolean",
+     "transcription_config": "object",
+     "sip_region": "string",
+     "stream_auth_token": "string",
+     "route_to_mobile": "boolean",
+     "enqueued_at": "string",
+     "wait_time_secs": "integer",
+     "queue_position": "integer",
+     "queue_id": "string",
+     "keep_after_hangup": "boolean",
+     "calls": "array",
+     "end": "integer",
+     "first_page_uri": "string",
+     "next_page_uri": "string",
+     "page": "integer",
+     "page_size": "integer",
+     "start": "integer",
+     "uri": "string",
+     "status": "string",
+     "Texml": "string",
+     "ApplicationSid": "string",
+     "To": "string",
+     "From": "string",
+     "CallerId": "string",
+     "Url": "string",
+     "UrlMethod": "string",
+     "FallbackUrl": "string",
+     "StatusCallback": "string",
+     "StatusCallbackMethod": "string",
+     "StatusCallbackEvent": "string",
+     "MachineDetection": "string",
+     "DetectionMode": "string",
+     "AsyncAmd": "boolean",
+     "AsyncAmdStatusCallback": "string",
+     "AsyncAmdStatusCallbackMethod": "string",
+     "MachineDetectionTimeout": "integer",
+     "MachineDetectionPromptEndTimeout": "integer",
+     "MachineDetectionSpeechThreshold": "integer",
+     "MachineDetectionSpeechEndThreshold": "integer",
+     "MachineDetectionSilenceTimeout": "integer",
+     "MachineDetectionBeepProfile": "string",
+     "MachineDetectionBeepMinFrequency": "integer",
+     "MachineDetectionBeepMaxFrequency": "integer",
+     "MachineDetectionBeepMinToneDuration": "integer",
+     "MachineDetectionBeepSpectralConfirmation": "boolean",
+     "MachineDetectionBeepSpectralWindow": "integer",
+     "MachineDetectionBeepSpectralMinPurity": "number",
+     "MachineDetectionBeepSpectralRejectFaxCng": "boolean",
+     "CancelPlaybackOnMachineDetection": "boolean",
+     "CancelPlaybackOnDetectMessageEnd": "boolean",
+     "DeepfakeDetection": "string",
+     "DeepfakeDetectionCallbackUrl": "string",
+     "DeepfakeDetectionCallbackMethod": "string",
+     "PreferredCodecs": "string",
+     "Record": "boolean",
+     "RecordingChannels": "string",
+     "RecordingStatusCallback": "string",
+     "RecordingStatusCallbackMethod": "string",
+     "RecordingStatusCallbackEvent": "string",
+     "RecordingTimeout": "integer",
+     "RecordingTrack": "string",
+     "SendRecordingUrl": "boolean",
+     "SipAuthPassword": "string",
+     "SipAuthUsername": "string",
+     "Trim": "string",
+     "CustomHeaders": "array",
+     "SipRegion": "string",
+     "MediaEncryption": "string",
+     "SuperviseCallSid": "string",
+     "SupervisingRole": "string",
+     "Timeout": "integer",
+     "TimeLimit": "integer",
+     "account_sid": "string",
+     "answered_by": "string",
+     "caller_name": "string",
+     "date_created": "string",
+     "date_updated": "string",
+     "direction": "string",
+     "duration": "string",
+     "from_formatted": "string",
+     "price": "string",
+     "price_unit": "string",
+     "sid": "string",
+     "to_formatted": "string",
+     "call_sid": "string",
+     "Method": "string",
+     "id": "string",
+     "type": "string",
+     "phone_number": "string",
+     "verify_profile_id": "string",
+     "custom_code": [
+      "string",
+      "null"
+     ],
+     "created_at": "string",
+     "updated_at": "string",
+     "extension": [
+      "string",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/telnyx-openapi.json#DELETE /queues/{queue_name}/calls/{call_control_id}",
+     "openapi/_original/telnyx-openapi.json#GET /calls/{call_control_id}",
+     "openapi/_original/telnyx-openapi.json#GET /queues/{queue_name}/calls",
+     "openapi/_original/telnyx-openapi.json#GET /queues/{queue_name}/calls/{call_control_id}",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Calls",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Calls/{call_sid}",
+     "openapi/_original/telnyx-openapi.json#PATCH /queues/{queue_name}/calls/{call_control_id}",
+     "openapi/_original/telnyx-openapi.json#POST /calls",
+     "openapi/_original/telnyx-openapi.json#POST /texml/Accounts/{account_sid}/Calls",
+     "openapi/_original/telnyx-openapi.json#POST /texml/Accounts/{account_sid}/Calls/{call_sid}",
+     "openapi/_original/telnyx-openapi.json#POST /texml/calls/{connection_id}",
+     "openapi/_original/telnyx-openapi.json#POST /verifications/call"
+    ]
+   },
+   "the-mobile-first-company": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "from_number": "string",
+     "to_number": "string",
+     "length_in_minutes": "number",
+     "type": "string",
+     "result": "string",
+     "summary": "string",
+     "tag": "string",
+     "recording_url": "string",
+     "start_date": "string",
+     "transcript": "array"
+    },
+    "evidence": [
+     "openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v1/api/calls"
+    ]
+   },
+   "thoughtly": {
+    "segments": [
+     "call"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "error": "object",
+     "data": "object",
+     "contact_id": "string",
+     "interview_id": "string",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/thoughtly-api-openapi.yml#POST /contact/call"
+    ]
+   },
+   "twilio": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "calls": "array",
+     "first_page_uri": "string",
+     "next_page_uri": "string",
+     "previous_page_uri": "string",
+     "page": "integer",
+     "page_size": "integer",
+     "uri": "string",
+     "sid": "string",
+     "account_sid": "string",
+     "parent_call_sid": "string",
+     "to": "string",
+     "to_formatted": "string",
+     "from": "string",
+     "from_formatted": "string",
+     "phone_number_sid": "string",
+     "status": "string",
+     "direction": "string",
+     "price": "string",
+     "price_unit": "string",
+     "duration": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "date_created": "string",
+     "date_updated": "string",
+     "answered_by": "string",
+     "caller_name": "string",
+     "forwarded_from": "string",
+     "group_sid": "string",
+     "api_version": "string",
+     "subresource_uris": "object"
+    },
+    "evidence": [
+     "openapi/_original/twilio-voice-openapi.yml#DELETE /Accounts/{AccountSid}/Calls/{CallSid}.json",
+     "openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Calls.json",
+     "openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Calls/{CallSid}.json",
+     "openapi/_original/twilio-voice-openapi.yml#POST /Accounts/{AccountSid}/Calls.json",
+     "openapi/_original/twilio-voice-openapi.yml#POST /Accounts/{AccountSid}/Calls/{CallSid}.json",
+     "openapi/_original/voice-openapi-original.yml#DELETE /v1/Archives/{Date}/Calls/{Sid}"
+    ]
+   },
+   "unifonic": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "callId": "string",
+     "status": "string",
+     "referenceId": "string",
+     "recipient": "array",
+     "callerId": "string",
+     "type": "string",
+     "callRecording": "boolean",
+     "expiry": "string",
+     "ivr": "object"
+    },
+    "evidence": [
+     "openapi/_original/unifonic-voice-openapi-original.json#POST /calls"
+    ]
+   },
+   "vapi": {
+    "segments": [
+     "call"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "type": "string",
+     "costs": "array",
+     "messages": "array",
+     "phoneCallProvider": "string",
+     "phoneCallTransport": "string",
+     "status": "string",
+     "endedReason": "string",
+     "endedMessage": "string",
+     "destination": null,
+     "id": "string",
+     "orgId": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "startedAt": "string",
+     "endedAt": "string",
+     "cost": "number",
+     "costBreakdown": null,
+     "artifactPlan": null,
+     "analysis": null,
+     "monitor": null,
+     "artifact": null,
+     "compliance": null,
+     "phoneCallProviderId": "string",
+     "campaignId": "string",
+     "assistantId": "string",
+     "assistant": null,
+     "assistantOverrides": null,
+     "squadId": "string",
+     "squad": null,
+     "squadOverrides": null,
+     "workflowId": "string",
+     "workflow": null,
+     "workflowOverrides": null,
+     "phoneNumberId": "string",
+     "phoneNumber": null,
+     "customerId": "string",
+     "customer": null,
+     "name": "string",
+     "schedulePlan": null,
+     "transport": "object",
+     "customers": "array",
+     "ids": "array"
+    },
+    "evidence": [
+     "openapi/_original/vapi-openapi.yml#DELETE /call/{id}",
+     "openapi/_original/vapi-openapi.yml#GET /call",
+     "openapi/_original/vapi-openapi.yml#GET /call/{id}",
+     "openapi/_original/vapi-openapi.yml#PATCH /call/{id}",
+     "openapi/_original/vapi-openapi.yml#POST /call"
+    ]
+   },
+   "vapi-ai": {
+    "segments": [
+     "call"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "type": "string",
+     "costs": "array",
+     "messages": "array",
+     "phoneCallProvider": "string",
+     "phoneCallTransport": "string",
+     "status": "string",
+     "endedReason": "string",
+     "endedMessage": "string",
+     "destination": null,
+     "id": "string",
+     "orgId": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "startedAt": "string",
+     "endedAt": "string",
+     "cost": "number",
+     "costBreakdown": null,
+     "artifactPlan": null,
+     "analysis": null,
+     "monitor": null,
+     "artifact": null,
+     "compliance": null,
+     "phoneCallProviderId": "string",
+     "campaignId": "string",
+     "assistantId": "string",
+     "assistant": null,
+     "assistantOverrides": null,
+     "squadId": "string",
+     "squad": null,
+     "squadOverrides": null,
+     "workflowId": "string",
+     "workflow": null,
+     "workflowOverrides": null,
+     "phoneNumberId": "string",
+     "phoneNumber": null,
+     "customerId": "string",
+     "customer": null,
+     "name": "string",
+     "schedulePlan": null,
+     "transport": "object",
+     "customers": "array",
+     "ids": "array"
+    },
+    "evidence": [
+     "openapi/_original/vapi-calls-api-openapi.yml#DELETE /call/{id}",
+     "openapi/_original/vapi-calls-api-openapi.yml#GET /call",
+     "openapi/_original/vapi-calls-api-openapi.yml#GET /call/{id}",
+     "openapi/_original/vapi-calls-api-openapi.yml#PATCH /call/{id}",
+     "openapi/_original/vapi-calls-api-openapi.yml#POST /call"
+    ]
+   },
+   "vocode": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "user_id": "string",
+     "status": "string",
+     "to_number": "string",
+     "from_number": "string",
+     "agent": "object",
+     "telephony_provider": "string",
+     "agent_phone_number": "string",
+     "transcript": "string",
+     "error_message": "string",
+     "recording_available": "boolean",
+     "human_detection_result": "string",
+     "do_not_call_result": "boolean",
+     "stage": "string",
+     "stage_outcome": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "hipaa_compliant": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/vocode-openapi.yml#GET /calls"
+    ]
+   },
+   "voygr": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "call_id": "string",
+     "customer_id": "string",
+     "task_id": "string",
+     "target_phone": "string",
+     "language": "string",
+     "status": "string",
+     "call_sid": null,
+     "started_at": null,
+     "ended_at": null,
+     "duration_sec": null,
+     "outcome_type": null,
+     "outcome_summary": null,
+     "outcome_charge_cents": "integer",
+     "created_at": "string",
+     "has_recording": "boolean",
+     "recording_url": null,
+     "reservation_signals": null,
+     "transcript_full": null,
+     "supervisor_decisions": null,
+     "call": "object",
+     "credits_reserved": "integer",
+     "credits_charge_on_success": "integer",
+     "owner_pod": "string",
+     "brief": null,
+     "intent": null,
+     "slots": null,
+     "kind": "string",
+     "ask_user_mode": "string"
+    },
+    "evidence": [
+     "openapi/_original/voygr-calls-api-openapi.json#GET /calls",
+     "openapi/_original/voygr-calls-api-openapi.json#GET /calls/{call_id}",
+     "openapi/_original/voygr-calls-api-openapi.json#POST /calls"
+    ]
+   },
+   "wazo": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "caller_id_name": "string",
+     "caller_id_number": "string",
+     "conversation_id": "string",
+     "creation_time": "string",
+     "node_uuid": "string",
+     "on_hold": "boolean",
+     "is_caller": "boolean",
+     "dialed_extension": "string",
+     "variables": "object",
+     "snoops": "object",
+     "exten": "string",
+     "context": "string",
+     "autoanswer": "boolean",
+     "displayed_caller_id_name": "string",
+     "displayed_caller_id_number": "string",
+     "call_id": "string",
+     "user_uuid": "string",
+     "talking_to": "object",
+     "bridges": "array",
+     "direction": "string",
+     "answer_time": "string",
+     "hangup_time": "string",
+     "peer_caller_id_name": "string",
+     "peer_caller_id_number": "string",
+     "muted": "boolean",
+     "parked": "boolean",
+     "is_video": "boolean",
+     "sip_call_id": "string",
+     "line_id": "integer",
+     "record_state": "string",
+     "destination": "object",
+     "source": "object",
+     "extension": "string",
+     "from_mobile": "boolean",
+     "all_lines": "boolean",
+     "auto_answer_caller": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/wazo-calld-api-openapi.yml#DELETE /applications/{application_uuid}/calls/{call_id}",
+     "openapi/_original/wazo-calld-api-openapi.yml#DELETE /applications/{application_uuid}/nodes/{node_uuid}/calls/{call_id}",
+     "openapi/_original/wazo-calld-api-openapi.yml#DELETE /calls/{call_id}",
+     "openapi/_original/wazo-calld-api-openapi.yml#DELETE /users/me/calls/{call_id}",
+     "openapi/_original/wazo-calld-api-openapi.yml#GET /applications/{application_uuid}/calls",
+     "openapi/_original/wazo-calld-api-openapi.yml#GET /calls",
+     "openapi/_original/wazo-calld-api-openapi.yml#GET /calls/{call_id}",
+     "openapi/_original/wazo-calld-api-openapi.yml#GET /users/me/calls",
+     "openapi/_original/wazo-calld-api-openapi.yml#POST /applications/{application_uuid}/calls",
+     "openapi/_original/wazo-calld-api-openapi.yml#POST /applications/{application_uuid}/nodes/{node_uuid}/calls",
+     "openapi/_original/wazo-calld-api-openapi.yml#POST /calls",
+     "openapi/_original/wazo-calld-api-openapi.yml#POST /users/me/calls"
+    ]
+   },
+   "webex": {
+    "segments": [
+     "calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "callSessionId": "string",
+     "personality": null,
+     "state": null,
+     "remoteParty": null,
+     "appearance": "number",
+     "created": "string",
+     "answered": "string",
+     "redirections": "array",
+     "recall": null,
+     "recordingState": null,
+     "muteCapable": "boolean",
+     "muted": "boolean",
+     "callId": "string",
+     "origCallId": "string",
+     "addTime": "string",
+     "removeTime": "string",
+     "mandatoryEntrance": "boolean",
+     "bounced": "boolean",
+     "reordered": "boolean",
+     "preservedWaitTime": "integer",
+     "queueNumber": "string",
+     "queueName": "string",
+     "priority": "string",
+     "answeringAgentId": "string",
+     "answeringAgentType": "string",
+     "answeringCallId": "string",
+     "answeringNetworkCallId": "string"
+    },
+    "evidence": [
+     "openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/calls",
+     "openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/calls/members/me/calls",
+     "openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/calls/members/me/calls/{callId}",
+     "openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/calls/{callId}",
+     "openapi/_original/webex-cloud-calling-openapi.yml#GET /telephony/calls",
+     "openapi/_original/webex-cloud-calling-openapi.yml#GET /telephony/calls/members/me/calls",
+     "openapi/_original/webex-cloud-calling-openapi.yml#GET /telephony/calls/members/me/calls/{callId}",
+     "openapi/_original/webex-cloud-calling-openapi.yml#GET /telephony/calls/{callId}",
+     "openapi/_original/webex-cloud-calling-openapi.yml#GET /telephony/queues/{queueId}/calls"
+    ]
+   },
+   "zoom-phone": {
+    "segments": [
+     "call_logs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "call_logs": "array",
+     "from": "string",
+     "next_page_token": "string",
+     "page_count": "integer",
+     "page_size": "integer",
+     "to": "string",
+     "total_records": "integer",
+     "call_id": "string",
+     "call_type": "string",
+     "callee_country_code": "string",
+     "callee_country_iso_code": "string",
+     "callee_did_number": "string",
+     "callee_name": "string",
+     "callee_number": "string",
+     "callee_number_type": "integer",
+     "callee_number_source": "string",
+     "callee_status": "string",
+     "callee_deleted_time": "string",
+     "caller_country_code": "string",
+     "caller_country_iso_code": "string",
+     "caller_did_number": "string",
+     "caller_name": "string",
+     "caller_number": "string",
+     "caller_number_type": "integer",
+     "caller_number_source": "string",
+     "caller_billing_reference_id": "string",
+     "caller_status": "string",
+     "caller_deleted_time": "string",
+     "date_time": "string",
+     "device_private_ip": "string",
+     "device_public_ip": "string",
+     "direction": "string",
+     "duration": "integer",
+     "has_recording": "boolean",
+     "has_voicemail": "boolean",
+     "id": "string",
+     "log_details": "array",
+     "path": "string",
+     "result": "string",
+     "department": "string",
+     "cost_center": "string",
+     "callee": "object",
+     "caller": "object",
+     "mos": "string"
+    },
+    "evidence": [
+     "openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/users/{userId}/call_logs/{callLogId}",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_logs",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_logs/{callLogId}",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/metrics/call_logs",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/metrics/call_logs/{call_id}",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/users/{userId}/call_logs"
+    ]
+   }
+  },
+  "recording": {
+   "46elks": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "callid": "string",
+     "created": "string",
+     "wav": "string",
+     "mp3": "string"
+    },
+    "evidence": [
+     "openapi/_original/46elks-openapi.yml#GET /recordings"
+    ]
+   },
+   "8x8": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "recordingId": "string",
+     "sessionid": "string",
+     "subAccountId": "string",
+     "status": "string",
+     "externalFileUrl": "string",
+     "duration": "integer",
+     "startRecordingTime": "string"
+    },
+    "evidence": [
+     "openapi/_original/8x8-connect-number-masking-api.json#GET /api/v1/subaccounts/{subAccountId}/recordings/{sessionId}",
+     "openapi/_original/8x8-connect-voice-v1-api.json#GET /api/v1/subaccounts/{subAccountId}/recordings/{sessionId}"
+    ]
+   },
+   "agentphone": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/agentphone-openapi-original.json#GET /v1/calls/{call_id}/recording"
+    ]
+   },
+   "bandwidth": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "recordingId": "string",
+     "accountId": "string",
+     "callId": "string",
+     "applicationId": "string",
+     "duration": "string",
+     "channels": "integer",
+     "startTime": "string",
+     "endTime": "string",
+     "fileFormat": "string",
+     "status": "string",
+     "mediaUrl": "string",
+     "transcription": "object"
+    },
+    "evidence": [
+     "openapi/_original/bandwidth-voice-api-openapi.yml#DELETE /accounts/{accountId}/calls/{callId}/recordings/{recordingId}",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#GET /accounts/{accountId}/calls/{callId}/recordings",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#GET /accounts/{accountId}/calls/{callId}/recordings/{recordingId}",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#GET /accounts/{accountId}/conferences/{conferenceId}/recordings",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#GET /accounts/{accountId}/recordings"
+    ]
+   },
+   "bird": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "format": "string",
+     "legId": "string",
+     "status": "string",
+     "duration": "integer",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/messagebird-recordings-api-openapi.yml#DELETE /recordings/{recordingId}",
+     "openapi/_original/messagebird-recordings-api-openapi.yml#GET /calls/{callId}/legs/{legId}/recordings",
+     "openapi/_original/messagebird-recordings-api-openapi.yml#GET /recordings/{recordingId}"
+    ]
+   },
+   "cloudtalk": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/cloudtalk-openapi.json#GET /calls/recording/{callId}.json"
+    ]
+   },
+   "cm-com": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/cm-com-halo-analytics-v1-openapi.yml#GET /analytics/v2/accounts/{account_id}/conversations/{conversation_id}/recording"
+    ]
+   },
+   "daily": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "start_ts": "integer",
+     "status": "string",
+     "max_participants": "integer",
+     "share_token": "string",
+     "s3key": "string",
+     "mtgSessionId": "string",
+     "room_name": "string",
+     "duration": "integer",
+     "tracks": "array",
+     "deleted": "boolean",
+     "s3_bucket": "string",
+     "s3_region": "string",
+     "s3_key": "string"
+    },
+    "evidence": [
+     "openapi/_original/daily-openapi-original.json#DELETE /recordings/{recording_id}",
+     "openapi/_original/daily-openapi-original.json#GET /recordings",
+     "openapi/_original/daily-openapi-original.json#GET /recordings/{recording_id}"
+    ]
+   },
+   "daily-co": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "start_ts": "integer",
+     "status": "string",
+     "max_participants": "integer",
+     "share_token": "string",
+     "s3key": "string",
+     "mtgSessionId": "string",
+     "storage_provider": "string",
+     "room_name": "string",
+     "duration": "integer",
+     "tracks": "array",
+     "deleted": "boolean",
+     "s3_bucket": "string",
+     "s3_region": "string",
+     "s3_key": "string"
+    },
+    "evidence": [
+     "openapi/_original/daily-co-openapi.json#DELETE /recordings/{recording_id}",
+     "openapi/_original/daily-co-openapi.json#GET /recordings",
+     "openapi/_original/daily-co-openapi.json#GET /recordings/{recording_id}"
+    ]
+   },
+   "dyte": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "meeting_id": "string",
+     "session_id": "string",
+     "status": "string",
+     "output_file_name": "string",
+     "download_url": "string",
+     "started_time": "string",
+     "stopped_time": "string",
+     "file_name_prefix": "string",
+     "audio_config": "object",
+     "video_config": "object",
+     "storage_config": "object",
+     "action": "string"
+    },
+    "evidence": [
+     "openapi/_original/dyte-openapi.yml#GET /recordings",
+     "openapi/_original/dyte-openapi.yml#GET /recordings/{recordingId}",
+     "openapi/_original/dyte-openapi.yml#POST /recordings",
+     "openapi/_original/dyte-openapi.yml#PUT /recordings/{recordingId}"
+    ]
+   },
+   "fixie": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/calls/{call_id}/recording"
+    ]
+   },
+   "genesys": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "url": "string",
+     "uploadKey": "string",
+     "headers": "object",
+     "fileName": "string",
+     "contentMd5": "string",
+     "signedUrlTimeoutSeconds": "integer",
+     "contentType": "string",
+     "serverSideEncryption": "string",
+     "id": "string",
+     "name": "string",
+     "conversationId": "string",
+     "path": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "media": "string",
+     "mediaSubtype": "string",
+     "mediaSubject": "string",
+     "annotations": "array",
+     "transcript": "array",
+     "emailTranscript": "array",
+     "messagingTranscript": "array",
+     "fileState": "string",
+     "restoreExpirationTime": "string",
+     "mediaUris": "object",
+     "estimatedTranscodeTimeMs": "integer",
+     "actualTranscodeTimeMs": "integer",
+     "archiveDate": "string",
+     "archiveMedium": "string",
+     "deleteDate": "string",
+     "exportDate": "string",
+     "exportedDate": "string",
+     "outputDurationMs": "integer",
+     "outputSizeInBytes": "integer",
+     "maxAllowedRestorationsForOrg": "integer",
+     "remainingRestorationsAllowedForOrg": "integer",
+     "sessionId": "string",
+     "users": "array",
+     "recordingFileRole": "string",
+     "recordingErrorStatus": "string",
+     "originalRecordingStartTime": "string",
+     "creationTime": "string",
+     "associatedConversationIds": "array",
+     "selfUri": "string"
+    },
+    "evidence": [
+     "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/{conversationId}/recordings",
+     "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/{conversationId}/recordings/{recordingId}",
+     "openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/uploads/recordings",
+     "openapi/_original/genesys-platform-api-openapi-original.json#PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}"
+    ]
+   },
+   "gladly": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/gladly-rest-api-openapi.yml#GET /api/v1/conversation-items/{itemId}/media/recording"
+    ]
+   },
+   "happyrobot": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "recordings": "array"
+    },
+    "evidence": [
+     "openapi/_original/happyrobot-platform-v1-openapi.json#GET /runs/{run_id}/recordings",
+     "openapi/_original/happyrobot-public-api-openapi.json#GET /runs/{run_id}/recordings"
+    ]
+   },
+   "infobip": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE collection",
+     "DELETE item",
+     "GET collection"
+    ],
+    "properties": {
+     "application": "object",
+     "recording": "object"
+    },
+    "evidence": [
+     "openapi/_original/infobip-platform-full-openapi.json#DELETE /call-link/1/recordings/{id}",
+     "openapi/_original/infobip-platform-full-openapi.json#DELETE /callrouting/1/recordings",
+     "openapi/_original/infobip-platform-full-openapi.json#DELETE /webrtc/1/recordings/{id}",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /call-link/1/recordings",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /callrouting/1/recordings",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /webrtc/1/recordings",
+     "openapi/_original/infobip-platform-openapi.json#DELETE /call-link/1/recordings/{id}",
+     "openapi/_original/infobip-platform-openapi.json#DELETE /callrouting/1/recordings",
+     "openapi/_original/infobip-platform-openapi.json#DELETE /webrtc/1/recordings/{id}",
+     "openapi/_original/infobip-platform-openapi.json#GET /call-link/1/recordings",
+     "openapi/_original/infobip-platform-openapi.json#GET /callrouting/1/recordings",
+     "openapi/_original/infobip-platform-openapi.json#GET /webrtc/1/recordings"
+    ]
+   },
+   "layercode": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/layercode-openapi.yml#GET /agents/{agent_id}/sessions/{session_id}/recording"
+    ]
+   },
+   "messagebird": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "format": "string",
+     "legId": "string",
+     "status": "string",
+     "duration": "integer",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/messagebird-voice-calling-openapi.yml#DELETE /recordings/{recordingId}",
+     "openapi/_original/messagebird-voice-calling-openapi.yml#GET /calls/{callId}/legs/{legId}/recordings",
+     "openapi/_original/messagebird-voice-calling-openapi.yml#GET /recordings/{recordingId}"
+    ]
+   },
+   "openphone": {
+    "segments": [
+     "call-recordings"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "duration": null,
+     "id": "string",
+     "startTime": null,
+     "status": null,
+     "type": null,
+     "url": null
+    },
+    "evidence": [
+     "openapi/_original/openphone-openapi-original.json#GET /v1/call-recordings/{callId}"
+    ]
+   },
+   "quo": {
+    "segments": [
+     "call-recordings"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "duration": null,
+     "id": "string",
+     "startTime": null,
+     "status": null,
+     "type": null,
+     "url": null
+    },
+    "evidence": [
+     "openapi/_original/quo-public-api-v1.json#GET /v1/call-recordings/{callId}"
+    ]
+   },
+   "resemble-ai": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "success": "boolean",
+     "items": "array",
+     "item": "object",
+     "name": "string",
+     "text": "string",
+     "emotion": "string",
+     "is_active": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/resemble-ai-openapi.yml#DELETE /voices/{voice_uuid}/recordings/{recording_id}",
+     "openapi/_original/resemble-ai-openapi.yml#GET /voices/{voice_uuid}/recordings",
+     "openapi/_original/resemble-ai-openapi.yml#GET /voices/{voice_uuid}/recordings/{recording_id}",
+     "openapi/_original/resemble-ai-openapi.yml#PATCH /voices/{voice_uuid}/recordings/{recording_id}",
+     "openapi/_original/resemble-ai-openapi.yml#POST /voices/{voice_uuid}/recordings"
+    ]
+   },
+   "ringcentral": {
+    "segments": [
+     "recordings",
+     "call-recordings",
+     "recording"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "creationTime": "string",
+     "lastModifiedTime": "string",
+     "status": "string",
+     "failureReason": "object",
+     "duration": "integer",
+     "shared": "boolean",
+     "sharedUriExpirationTime": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "title": "string",
+     "description": "string",
+     "webinar": null,
+     "recordingSharedUri": "string",
+     "host": null,
+     "shortId": "string",
+     "displayName": "string",
+     "hostInfo": "object",
+     "mediaLink": "string",
+     "url": "string",
+     "expiresIn": "string",
+     "active": "boolean",
+     "records": "array",
+     "contentUri": "string",
+     "contentType": "string"
+    },
+    "evidence": [
+     "openapi/_original/ringcentral-platform-openapi.yml#DELETE /restapi/v1.0/account/{accountId}/call-recordings",
+     "openapi/_original/ringcentral-platform-openapi.yml#GET /rcvideo/v1/account/{accountId}/extension/{extensionId}/recordings",
+     "openapi/_original/ringcentral-platform-openapi.yml#GET /rcvideo/v1/account/{accountId}/recordings",
+     "openapi/_original/ringcentral-platform-openapi.yml#GET /restapi/v1.0/account/{accountId}/recording/{recordingId}",
+     "openapi/_original/ringcentral-platform-openapi.yml#GET /webinar/history/v1/company/recordings",
+     "openapi/_original/ringcentral-platform-openapi.yml#GET /webinar/history/v1/company/recordings/{recordingId}",
+     "openapi/_original/ringcentral-platform-openapi.yml#GET /webinar/history/v1/recordings",
+     "openapi/_original/ringcentral-platform-openapi.yml#GET /webinar/history/v1/recordings/{recordingId}",
+     "openapi/_original/ringcentral-platform-openapi.yml#PATCH /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}",
+     "openapi/_original/ringcentral-platform-openapi.yml#POST /restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings"
+    ]
+   },
+   "saperly": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/api-saperly-com-openapi.json#GET /calls/{id}/recording",
+     "openapi/_original/saperly-com-openapi-bundled.json#GET /calls/{id}/recording",
+     "openapi/_original/saperly-openapi.yml#GET /calls/{id}/recording"
+    ]
+   },
+   "sarj-ai-developer-api": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/sarj-ai-developer-api-developer-openapi.json#GET /calls/{call_id}/recording"
+    ]
+   },
+   "signalwire": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "sid": null,
+     "account_sid": null,
+     "api_version": "string",
+     "call_sid": null,
+     "conference_sid": null,
+     "channel": "string",
+     "channels": "string",
+     "date_created": "string",
+     "date_updated": "string",
+     "start_time": null,
+     "end_time": null,
+     "duration": "integer",
+     "price": null,
+     "price_unit": "string",
+     "source": null,
+     "status": null,
+     "error_code": null,
+     "uri": "string",
+     "subresource_uris": null,
+     "encryption_details": null,
+     "trim": "string",
+     "first_page_uri": "string",
+     "next_page_uri": null,
+     "previous_page_uri": null,
+     "page": "integer",
+     "page_size": "integer",
+     "recordings": "array",
+     "id": null,
+     "project_id": null,
+     "created_at": "string",
+     "updated_at": "string",
+     "duration_in_seconds": "integer",
+     "url": "string",
+     "stereo": "boolean",
+     "byte_size": "integer",
+     "track": "string",
+     "relay_conference_id": null,
+     "relay_pstn_leg_id": null,
+     "room_session_id": null,
+     "started_at": null,
+     "finished_at": null,
+     "size_in_bytes": null,
+     "format": null,
+     "cost_in_dollars": "number"
+    },
+    "evidence": [
+     "openapi/_original/signalwire-compatibility-openapi.yaml#DELETE /Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#DELETE /Accounts/{AccountSid}/Recordings/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Recordings",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Recordings/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/Calls/{CallSid}/Recordings",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/Calls/{CallSid}/Recordings/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#DELETE /Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#DELETE /Accounts/{AccountSid}/Recordings/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#GET /Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings"
+    ]
+   },
+   "speko": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "url": "string"
+    },
+    "evidence": [
+     "openapi/_original/speko-openapi-original.json#GET /v1/calls/{id}/recording",
+     "openapi/_original/speko-openapi-original.json#GET /v1/sessions/{id}/recording"
+    ]
+   },
+   "syllable": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "POST item"
+    ],
+    "properties": {
+     "session_id": null,
+     "recordings": null
+    },
+    "evidence": [
+     "openapi/_original/syllable-sdk-openapi-original.yml#POST /api/v1/sessions/recording/{session_id}"
+    ]
+   },
+   "telnyx": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "type": "string",
+     "url": "string",
+     "expires_at": [
+      "string",
+      "null"
+     ],
+     "call_control_id": "string",
+     "call_leg_id": "string",
+     "call_session_id": "string",
+     "channels": "string",
+     "conference_id": "string",
+     "created_at": "string",
+     "download_urls": "object",
+     "duration_millis": "integer",
+     "id": "string",
+     "record_type": "string",
+     "recording_started_at": "string",
+     "recording_ended_at": "string",
+     "source": "string",
+     "status": "string",
+     "from": "string",
+     "to": "string",
+     "connection_id": "string",
+     "initiated_by": "string",
+     "updated_at": "string",
+     "recordings": "array",
+     "end": "integer",
+     "first_page_uri": "string",
+     "previous_page_uri": "string",
+     "next_page_uri": "string",
+     "page": "integer",
+     "page_size": "integer",
+     "start": "integer",
+     "uri": "string",
+     "account_sid": "string",
+     "call_sid": "string",
+     "conference_sid": [
+      "string",
+      "null"
+     ],
+     "date_created": "string",
+     "date_updated": "string",
+     "start_time": "string",
+     "price": [
+      "string",
+      "null"
+     ],
+     "price_unit": [
+      "string",
+      "null"
+     ],
+     "duration": [
+      "string",
+      "null"
+     ],
+     "sid": "string",
+     "error_code": [
+      "string",
+      "null"
+     ],
+     "track": "string",
+     "participants": "array",
+     "subresources_uris": "object",
+     "media_url": "string"
+    },
+    "evidence": [
+     "openapi/_original/telnyx-openapi.json#DELETE /recordings/{recording_id}",
+     "openapi/_original/telnyx-openapi.json#DELETE /texml/Accounts/{account_sid}/Recordings/{recording_sid}.json",
+     "openapi/_original/telnyx-openapi.json#GET /meeting_sessions/{id}/recordings",
+     "openapi/_original/telnyx-openapi.json#GET /recordings",
+     "openapi/_original/telnyx-openapi.json#GET /recordings/{recording_id}",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Calls/{call_sid}/Recordings.json",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Conferences/{conference_sid}/Recordings",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Conferences/{conference_sid}/Recordings.json",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Recordings.json",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Recordings/{recording_sid}.json",
+     "openapi/_original/telnyx-openapi.json#POST /texml/Accounts/{account_sid}/Calls/{call_sid}/Recordings.json",
+     "openapi/_original/telnyx-openapi.json#POST /texml/Accounts/{account_sid}/Calls/{call_sid}/Recordings/{recording_sid}.json"
+    ]
+   },
+   "twilio": {
+    "segments": [
+     "recordings",
+     "recording"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "mode": "string",
+     "trim": "string",
+     "sid": "string",
+     "account_sid": "string",
+     "room_sid": "string",
+     "source_sid": "string",
+     "status": "string",
+     "type": "string",
+     "duration": "integer",
+     "size": "integer",
+     "container_format": "string",
+     "codec": "string",
+     "grouping_sids": "object",
+     "track_name": "string",
+     "offset": "integer",
+     "media_external_location": "string",
+     "date_created": "string",
+     "date_updated": "string",
+     "url": "string",
+     "links": "object",
+     "call_sid": "string",
+     "conference_sid": "string",
+     "channels": "integer",
+     "price": "string",
+     "price_unit": "string",
+     "source": "string",
+     "uri": "string",
+     "status_callback": "string",
+     "status_callback_method": "string"
+    },
+    "evidence": [
+     "openapi/_original/trunking-openapi-original.yml#GET /v1/Trunks/{TrunkSid}/Recording",
+     "openapi/_original/trunking-openapi-original.yml#POST /v1/Trunks/{TrunkSid}/Recording",
+     "openapi/_original/twilio-video-openapi.yml#DELETE /Recordings/{RecordingSid}",
+     "openapi/_original/twilio-video-openapi.yml#GET /Recordings/{RecordingSid}",
+     "openapi/_original/twilio-video-openapi.yml#GET /Rooms/{RoomSid}/Recordings",
+     "openapi/_original/twilio-voice-openapi.yml#DELETE /Accounts/{AccountSid}/Recordings/{RecordingSid}.json",
+     "openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Calls/{CallSid}/Recordings.json",
+     "openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Recordings.json",
+     "openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Recordings/{RecordingSid}.json",
+     "openapi/_original/twilio-voice-openapi.yml#POST /Accounts/{AccountSid}/Calls/{CallSid}/Recordings.json",
+     "openapi/_original/video-openapi-original.yml#DELETE /v1/Recordings/{Sid}",
+     "openapi/_original/video-openapi-original.yml#DELETE /v1/Rooms/{RoomSid}/Recordings/{Sid}"
+    ]
+   },
+   "vocode": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/vocode-openapi.yml#GET /calls/recording"
+    ]
+   },
+   "vonage": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "session_id": "string",
+     "started_at": "string",
+     "ended_at": "string",
+     "status": "string",
+     "_links": "object"
+    },
+    "evidence": [
+     "openapi/_original/vonage-meetings-openapi.json#GET /sessions/:session_id/recordings",
+     "openapi/_original/vonage-meetings-openapi.yml#GET /sessions/:session_id/recordings"
+    ]
+   },
+   "wazo": {
+    "segments": [
+     "recording"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/wazo-calld-api-openapi.yml#GET /users/me/voicemails/messages/{message_id}/recording",
+     "openapi/_original/wazo-calld-api-openapi.yml#GET /voicemails/{voicemail_id}/messages/{message_id}/recording",
+     "openapi/_original/wazo-calld-openapi-original.yml#GET /users/me/voicemails/messages/{message_id}/recording",
+     "openapi/_original/wazo-calld-openapi-original.yml#GET /voicemails/{voicemail_id}/messages/{message_id}/recording"
+    ]
+   },
+   "weave": {
+    "segments": [
+     "call-recordings"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "call_record_id": "string",
+     "duration_seconds": "integer",
+     "created_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/weave-openapi.yml#GET /v1/call-recordings"
+    ]
+   },
+   "webex": {
+    "segments": [
+     "recordings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "meetingId": "string",
+     "scheduledMeetingId": "string",
+     "meetingSeriesId": "string",
+     "topic": "string",
+     "createTime": "string",
+     "timeRecorded": "string",
+     "siteUrl": "string",
+     "downloadUrl": "string",
+     "playbackUrl": "string",
+     "password": "string",
+     "format": "string",
+     "serviceType": "string",
+     "durationSeconds": "number",
+     "sizeBytes": "number",
+     "shareToMe": "boolean",
+     "integrationTags": "array",
+     "status": "string",
+     "hostDisplayName": "string",
+     "hostEmail": "string",
+     "temporaryDirectDownloadLinks": "object",
+     "reason": "string",
+     "comment": "string"
+    },
+    "evidence": [
+     "openapi/_original/webex-admin-openapi.json#DELETE /admin/recordings/{recordingId}",
+     "openapi/_original/webex-admin-openapi.json#DELETE /recordings/{recordingId}",
+     "openapi/_original/webex-admin-openapi.json#GET /admin/recordings",
+     "openapi/_original/webex-admin-openapi.json#GET /group/recordings",
+     "openapi/_original/webex-admin-openapi.json#GET /group/recordings/{recordingId}",
+     "openapi/_original/webex-admin-openapi.json#GET /recordings",
+     "openapi/_original/webex-admin-openapi.json#GET /recordings/{recordingId}",
+     "openapi/_original/webex-meeting-openapi.json#DELETE /admin/recordings/{recordingId}",
+     "openapi/_original/webex-meeting-openapi.json#DELETE /recordings/{recordingId}",
+     "openapi/_original/webex-meeting-openapi.json#GET /admin/recordings",
+     "openapi/_original/webex-meeting-openapi.json#GET /group/recordings",
+     "openapi/_original/webex-meeting-openapi.json#GET /group/recordings/{recordingId}"
+    ]
+   },
+   "zoom-phone": {
+    "segments": [
+     "recordings",
+     "recording"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "PATCH item"
+    ],
+    "properties": {
+     "callee_name": "string",
+     "callee_number": "string",
+     "callee_number_type": "string",
+     "caller_name": "string",
+     "caller_number": "string",
+     "caller_number_type": "integer",
+     "date_time": "string",
+     "direction": "string",
+     "download_url": "string",
+     "duration": "integer",
+     "id": "string",
+     "call_id": "string",
+     "call_element_id": "string",
+     "outgoing_by": "object",
+     "accepted_by": "object",
+     "end_time": "string",
+     "meeting_uuid": "string",
+     "owner": "object",
+     "soft_deleted": "boolean",
+     "soft_deleted_type": "string",
+     "deleted_time": "string",
+     "days_left_auto_permanently_delete": "integer",
+     "recording_type": "string",
+     "file_url": "string",
+     "disclaimer_status": "integer",
+     "caller_account_code": "string",
+     "callee_account_code": "string",
+     "call_log_id": "string",
+     "call_history_id": "string",
+     "days_left_auto_permantely_delete": "integer",
+     "auto_delete_policy": "string",
+     "site": "object",
+     "transcript_download_url": "string",
+     "auto_delete_enable": "boolean",
+     "from": "string",
+     "next_page_token": "string",
+     "page_count": "integer",
+     "page_size": "integer",
+     "recordings": "array",
+     "to": "string",
+     "total_records": "integer"
+    },
+    "evidence": [
+     "openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/recordings/{recordingId}",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_element/{callElementId}/recording",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_logs/{id}/recordings",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/call_queues/{callQueueId}/recordings",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/recordings",
+     "openapi/_original/zoom-phone-api-openapi.json#GET /phone/users/{userId}/recordings",
+     "openapi/_original/zoom-phone-api-openapi.json#PATCH /phone/recordings/{recordingId}"
+    ]
+   }
+  },
+  "transcription": {
+   "8x8": {
+    "segments": [
+     "transcriptions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "text": "string",
+     "confidence": "number",
+     "channel": "number",
+     "emotion": "string",
+     "gender": "string",
+     "timestampStart": "number",
+     "timestampEnd": "number"
+    },
+    "evidence": [
+     "openapi/_original/8x8-analytics-quality-management-and-speech-analytics-api.json#GET /interactions/{interactionGuid}/transcriptions"
+    ]
+   },
+   "actionpower": {
+    "segments": [
+     "transcripts"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "sttResult": "object",
+     "audioDuration": "number",
+     "elapsedTime": "integer",
+     "custom": "object",
+     "file": "string",
+     "sttConfig": "object",
+     "fileName": "string",
+     "rid": "string",
+     "audio": "object",
+     "nlpConfig": "object",
+     "callback": "object",
+     "callbackUrl": "string",
+     "word": "string",
+     "startTime": "object",
+     "endTime": "object",
+     "hasKeyword": "boolean",
+     "speaker": "string"
+    },
+    "evidence": [
+     "openapi/_original/actionpower-daglo-cloud-api-dev-openapi-original.yml#GET /stt/v1/async/transcripts/{rid}",
+     "openapi/_original/actionpower-daglo-cloud-api-dev-openapi-original.yml#POST /stt/v1/async/transcripts",
+     "openapi/_original/actionpower-daglo-cloud-api-dev-openapi-original.yml#POST /stt/v1/sync/transcripts",
+     "openapi/_original/actionpower-daglo-cloud-api-dev-openapi.yml#GET /stt/v1/async/transcripts/{rid}",
+     "openapi/_original/actionpower-daglo-cloud-api-dev-openapi.yml#POST /stt/v1/async/transcripts",
+     "openapi/_original/actionpower-daglo-cloud-api-dev-openapi.yml#POST /stt/v1/sync/transcripts",
+     "openapi/_original/actionpower-daglo-cloud-api-openapi-original.yml#GET /stt/v1/async/transcripts/{rid}",
+     "openapi/_original/actionpower-daglo-cloud-api-openapi-original.yml#POST /stt/v1/async/transcripts",
+     "openapi/_original/actionpower-daglo-cloud-api-openapi-original.yml#POST /stt/v1/sync/transcripts"
+    ]
+   },
+   "agentphone": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/agentphone-openapi-original.json#GET /v1/calls/{call_id}/transcript"
+    ]
+   },
+   "aircall": {
+    "segments": [
+     "transcription"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/aircall-openapi.yml#GET /calls/{id}/transcription"
+    ]
+   },
+   "amigo": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "speaker_role": "string",
+     "transcript": "string",
+     "timestamp": null,
+     "escalation_id": null,
+     "confidence": "number"
+    },
+    "evidence": [
+     "openapi/_original/amigo-platform-openapi-original.json#GET /v1/{workspace_id}/operators/calls/{call_sid}/transcript"
+    ]
+   },
+   "assemblyai": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/assemblyai-openapi-original.yml#DELETE /v2/transcript/{transcript_id}",
+     "openapi/_original/assemblyai-openapi-original.yml#GET /v2/transcript",
+     "openapi/_original/assemblyai-openapi-original.yml#GET /v2/transcript/{transcript_id}",
+     "openapi/_original/assemblyai-openapi-original.yml#POST /v2/transcript"
+    ]
+   },
+   "bandwidth": {
+    "segments": [
+     "transcription"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "completedTime": "string",
+     "url": "string",
+     "callbackUrl": "string",
+     "callbackMethod": "string",
+     "tag": "string"
+    },
+    "evidence": [
+     "openapi/_original/bandwidth-voice-api-openapi.yml#GET /accounts/{accountId}/calls/{callId}/recordings/{recordingId}/transcription",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#POST /accounts/{accountId}/calls/{callId}/recordings/{recordingId}/transcription"
+    ]
+   },
+   "bird": {
+    "segments": [
+     "transcriptions"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "recordingId": "string",
+     "status": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "language": "string"
+    },
+    "evidence": [
+     "openapi/_original/messagebird-transcriptions-api-openapi.yml#GET /recordings/{recordingId}/transcriptions",
+     "openapi/_original/messagebird-transcriptions-api-openapi.yml#POST /recordings/{recordingId}/transcriptions"
+    ]
+   },
+   "cloudtalk": {
+    "segments": [
+     "transcription"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "callId": "number",
+     "segments": "array",
+     "callers": "array",
+     "language": "string"
+    },
+    "evidence": [
+     "openapi/_original/cloudtalk-openapi.json#GET /ai/calls/{callId}/transcription"
+    ]
+   },
+   "daily": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "transcriptId": "string",
+     "domainId": "string",
+     "roomId": "string",
+     "mtgSessionId": "string",
+     "status": "string",
+     "isVttAvailable": "boolean",
+     "duration": "integer",
+     "created_at": "string",
+     "updated_at": "string",
+     "outParams": "object",
+     "error": "string"
+    },
+    "evidence": [
+     "openapi/_original/daily-openapi-original.json#DELETE /transcript/{transcriptId}",
+     "openapi/_original/daily-openapi-original.json#GET /transcript",
+     "openapi/_original/daily-openapi-original.json#GET /transcript/{transcriptId}"
+    ]
+   },
+   "daily-co": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "transcriptId": "string",
+     "domainId": "string",
+     "roomId": "string",
+     "mtgSessionId": "string",
+     "status": "string",
+     "isVttAvailable": "boolean",
+     "duration": "integer",
+     "created_at": "string",
+     "updated_at": "string",
+     "outParams": "object",
+     "error": "string"
+    },
+    "evidence": [
+     "openapi/_original/daily-co-openapi.json#DELETE /transcript/{transcriptId}",
+     "openapi/_original/daily-co-openapi.json#GET /transcript",
+     "openapi/_original/daily-co-openapi.json#GET /transcript/{transcriptId}"
+    ]
+   },
+   "dialpad": {
+    "segments": [
+     "transcripts"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dialpad-openapi.yml#GET /transcripts/{call_id}"
+    ]
+   },
+   "elevenlabs": {
+    "segments": [
+     "transcript",
+     "transcripts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "start": "number",
+     "end": "number",
+     "text": "string",
+     "speaker": "string",
+     "id": "string",
+     "speaker_id": "string",
+     "start_s": "number",
+     "end_s": "number",
+     "external_id": null,
+     "source_text": "string",
+     "translation": null,
+     "word_type": "string",
+     "characters": "array",
+     "language_code": "string",
+     "language_probability": "number",
+     "words": "array",
+     "channel_index": null,
+     "additional_formats": null,
+     "transcription_id": null,
+     "entities": null,
+     "audio_duration_secs": null
+    },
+    "evidence": [
+     "openapi/_original/elevenlabs-dubbing-openapi.yml#GET /v1/dubbing/{dubbing_id}/transcript/{language_code}",
+     "openapi/_original/elevenlabs-openapi.json#DELETE /v1/speech-to-text/transcripts/{transcription_id}",
+     "openapi/_original/elevenlabs-openapi.json#GET /v1/dubbing/project/{project_id}/language/{language_id}/transcript",
+     "openapi/_original/elevenlabs-openapi.json#GET /v1/dubbing/project/{project_id}/transcript",
+     "openapi/_original/elevenlabs-openapi.json#GET /v1/dubbing/{dubbing_id}/transcript/{language_code}",
+     "openapi/_original/elevenlabs-openapi.json#GET /v1/speech-to-text/transcripts/{transcription_id}"
+    ]
+   },
+   "genesys": {
+    "segments": [
+     "transcription"
+    ],
+    "operations": [
+     "GET collection",
+     "PATCH collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "transcription": "string",
+     "transcriptionConfidenceThreshold": "integer",
+     "lowLatencyTranscriptionEnabled": "boolean",
+     "contentSearchEnabled": "boolean",
+     "pciDssRedactionEnabled": "boolean",
+     "piiRedactionEnabled": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/routing/settings/transcription",
+     "openapi/_original/genesys-platform-api-openapi-original.json#PATCH /api/v2/routing/settings/transcription",
+     "openapi/_original/genesys-platform-api-openapi-original.json#PUT /api/v2/routing/settings/transcription"
+    ]
+   },
+   "heidi-health": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "session_id": "string",
+     "transcript": "string",
+     "language_code": "string"
+    },
+    "evidence": [
+     "openapi/_original/heidi-health-openapi.yml#GET /sessions/{session_id}/transcript"
+    ]
+   },
+   "messagebird": {
+    "segments": [
+     "transcriptions"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "recordingId": "string",
+     "status": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "language": "string"
+    },
+    "evidence": [
+     "openapi/_original/messagebird-voice-calling-openapi.yml#GET /recordings/{recordingId}/transcriptions",
+     "openapi/_original/messagebird-voice-calling-openapi.yml#POST /recordings/{recordingId}/transcriptions"
+    ]
+   },
+   "playht": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/playht-openapi.yml#GET /api/v1/agents/{agentId}/conversations/{conversationId}/transcript"
+    ]
+   },
+   "saperly": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/api-saperly-com-openapi.json#GET /calls/{id}/transcript",
+     "openapi/_original/saperly-com-openapi-bundled.json#GET /calls/{id}/transcript",
+     "openapi/_original/saperly-openapi.yml#GET /calls/{id}/transcript"
+    ]
+   },
+   "sarj-ai-developer-api": {
+    "segments": [
+     "transcriptions"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/sarj-ai-developer-api-stt-openapi.json#POST /openai/v1/audio/transcriptions"
+    ]
+   },
+   "signalwire": {
+    "segments": [
+     "transcriptions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "uri": "string",
+     "first_page_uri": "string",
+     "next_page_uri": null,
+     "previous_page_uri": null,
+     "page": "integer",
+     "page_size": "integer",
+     "transcriptions": "array",
+     "sid": null,
+     "account_sid": null,
+     "api_version": "string",
+     "recording_sid": null,
+     "date_created": "string",
+     "date_updated": "string",
+     "duration": "integer",
+     "price": null,
+     "price_unit": "string",
+     "status": "string",
+     "transcription_text": null,
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/signalwire-compatibility-openapi.yaml#DELETE /Accounts/{AccountSid}/Transcriptions/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Transcriptions",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Transcriptions/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#DELETE /Accounts/{AccountSid}/Transcriptions/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#GET /Accounts/{AccountSid}/Transcriptions",
+     "openapi/_original/signalwire-compatibility-openapi.yml#GET /Accounts/{AccountSid}/Transcriptions/{Sid}"
+    ]
+   },
+   "speechmatics": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "format": "string",
+     "job": "object",
+     "metadata": "object",
+     "results": "array",
+     "speakers": "array",
+     "translations": "object",
+     "summary": "object"
+    },
+    "evidence": [
+     "openapi/_original/speechmatics-batch-transcription-api-openapi.yml#GET /jobs/{jobid}/transcript"
+    ]
+   },
+   "speko": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "index": "integer",
+     "source": "string",
+     "text": "string",
+     "startedAt": "string",
+     "endedAt": "string",
+     "provider": "string",
+     "model": "string"
+    },
+    "evidence": [
+     "openapi/_original/speko-openapi-original.json#GET /v1/sessions/{id}/transcript"
+    ]
+   },
+   "spruce-health": {
+    "segments": [
+     "transcriptions"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "summarization": "object",
+     "text": "string"
+    },
+    "evidence": [
+     "openapi/_original/spruce-health-openapi.json#GET /transcriptions/{transcriptionId}",
+     "openapi/_original/spruce-health-transcription-openapi.yml#GET /transcriptions/{transcriptionId}"
+    ]
+   },
+   "syllable": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "session_id": "string",
+     "transcription": "array",
+     "actions": "array"
+    },
+    "evidence": [
+     "openapi/_original/syllable-sdk-openapi-original.yml#GET /api/v1/sessions/transcript/{session_id}"
+    ]
+   },
+   "telnyx": {
+    "segments": [
+     "transcriptions",
+     "transcription",
+     "transcript"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "text": "string",
+     "duration": "number",
+     "segments": "array",
+     "words": "array",
+     "seq": "integer",
+     "confidence": [
+      "number",
+      "null"
+     ],
+     "speaker_label": [
+      "string",
+      "null"
+     ],
+     "relative_ts": [
+      "number",
+      "null"
+     ],
+     "occurred_at": "string",
+     "transcriptions": "array",
+     "end": "integer",
+     "first_page_uri": "string",
+     "previous_page_uri": "string",
+     "next_page_uri": "string",
+     "page": "integer",
+     "page_size": "integer",
+     "start": "integer",
+     "uri": "string",
+     "account_sid": "string",
+     "call_sid": "string",
+     "api_version": "string",
+     "date_created": "string",
+     "date_updated": "string",
+     "sid": "string",
+     "recording_sid": "string",
+     "status": "string",
+     "transcription_text": "string"
+    },
+    "evidence": [
+     "openapi/_original/telnyx-openapi.json#DELETE /texml/Accounts/{account_sid}/Transcriptions/{recording_transcription_sid}.json",
+     "openapi/_original/telnyx-openapi.json#GET /meeting_sessions/{id}/transcript",
+     "openapi/_original/telnyx-openapi.json#GET /speech-to-text/transcription",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Transcriptions.json",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Transcriptions/{recording_transcription_sid}.json",
+     "openapi/_original/telnyx-openapi.json#POST /ai/audio/transcriptions",
+     "openapi/_original/telnyx-openapi.json#POST /v1/audio/transcriptions",
+     "openapi/_original/telnyx-openapi.yml#DELETE /texml/Accounts/{account_sid}/Transcriptions/{recording_transcription_sid}.json",
+     "openapi/_original/telnyx-openapi.yml#GET /speech-to-text/transcription",
+     "openapi/_original/telnyx-openapi.yml#GET /texml/Accounts/{account_sid}/Transcriptions.json",
+     "openapi/_original/telnyx-openapi.yml#GET /texml/Accounts/{account_sid}/Transcriptions/{recording_transcription_sid}.json",
+     "openapi/_original/telnyx-openapi.yml#POST /ai/audio/transcriptions"
+    ]
+   },
+   "twilio": {
+    "segments": [
+     "transcripts",
+     "transcriptions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "account_sid": "string",
+     "service_sid": "string",
+     "sid": "string",
+     "date_created": "string",
+     "date_updated": "string",
+     "status": "string",
+     "channel": null,
+     "data_logging": "boolean",
+     "language_code": "string",
+     "customer_key": "string",
+     "media_start_time": "string",
+     "duration": "integer",
+     "url": "string",
+     "redaction": "boolean",
+     "links": "object",
+     "operationId": "string",
+     "statusUrl": "string",
+     "transcription": "object",
+     "id": "string",
+     "accountId": "string",
+     "transcriptionConfigurationId": "string",
+     "mediaUrl": "string",
+     "sourceId": "string",
+     "audioStartedAt": "string",
+     "conversationId": "string",
+     "participants": "array",
+     "resolvedConfiguration": "object",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "type": "string",
+     "address": "string",
+     "name": "string",
+     "audioChannelIndex": "integer"
+    },
+    "evidence": [
+     "openapi/_original/intelligence-openapi-original.yml#DELETE /v2/Transcripts/{Sid}",
+     "openapi/_original/intelligence-openapi-original.yml#GET /v2/Transcripts",
+     "openapi/_original/intelligence-openapi-original.yml#GET /v2/Transcripts/{Sid}",
+     "openapi/_original/intelligence-openapi-original.yml#POST /v2/Transcripts",
+     "openapi/_original/voice-v3-openapi-original.yml#GET /v3/Transcriptions",
+     "openapi/_original/voice-v3-openapi-original.yml#GET /v3/Transcriptions/{transcriptionId}",
+     "openapi/_original/voice-v3-openapi-original.yml#POST /v3/Transcriptions"
+    ]
+   },
+   "wazo": {
+    "segments": [
+     "transcription",
+     "transcriptions"
+    ],
+    "operations": [
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "message_id": "string",
+     "tenant_uuid": "string",
+     "voicemail_id": "integer",
+     "transcription_text": "string",
+     "provider_id": "string",
+     "language": "string",
+     "duration": "number",
+     "created_at": "string",
+     "enabled": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/wazo-call-logd-api-openapi.yml#GET /voicemails/transcriptions",
+     "openapi/_original/wazo-call-logd-openapi-original.yml#GET /voicemails/transcriptions",
+     "openapi/_original/wazo-confd-api-openapi.yml#GET /voicemails/transcription",
+     "openapi/_original/wazo-confd-api-openapi.yml#PUT /voicemails/transcription",
+     "openapi/_original/wazo-confd-openapi-original.yml#GET /voicemails/transcription",
+     "openapi/_original/wazo-confd-openapi-original.yml#PUT /voicemails/transcription"
+    ]
+   },
+   "wispr-ai": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "transcript": null,
+     "speaker_map": null
+    },
+    "evidence": [
+     "openapi/_original/wispr-ai-backend-openapi-original.json#GET /api/v1/meetings/shared/{slug}/transcript",
+     "openapi/_original/wispr-ai-meeting-share-api-openapi.yml#GET /api/v1/meetings/shared/{slug}/transcript",
+     "openapi/_original/wisprflow-ai-meeting-share-api-openapi.yml#GET /api/v1/meetings/shared/{slug}/transcript"
+    ]
+   },
+   "wisprflow-ai": {
+    "segments": [
+     "transcript"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "transcript": null,
+     "speaker_map": null
+    },
+    "evidence": [
+     "openapi/_original/wispr-ai-backend-openapi-original.json#GET /api/v1/meetings/shared/{slug}/transcript",
+     "openapi/_original/wispr-ai-meeting-share-api-openapi.yml#GET /api/v1/meetings/shared/{slug}/transcript",
+     "openapi/_original/wispr-ai-meeting-share-api-openapi_2.yml#GET /api/v1/meetings/shared/{slug}/transcript",
+     "openapi/_original/wisprflow-ai-meeting-share-api-openapi.yml#GET /api/v1/meetings/shared/{slug}/transcript"
+    ]
+   }
+  },
+  "conference": {
+   "bandwidth": {
+    "segments": [
+     "conferences"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST item"
+    ],
+    "properties": {
+     "callId": "string",
+     "conferenceId": "string",
+     "memberUrl": "string",
+     "mute": "boolean",
+     "hold": "boolean",
+     "callIdsToCoach": "array",
+     "status": "string",
+     "redirectUrl": "string",
+     "redirectMethod": "string",
+     "tag": "string"
+    },
+    "evidence": [
+     "openapi/_original/bandwidth-voice-api-openapi.yml#GET /accounts/{accountId}/conferences",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#GET /accounts/{accountId}/conferences/{conferenceId}",
+     "openapi/_original/bandwidth-voice-api-openapi.yml#POST /accounts/{accountId}/conferences/{conferenceId}"
+    ]
+   },
+   "genesys": {
+    "segments": [
+     "conference"
+    ],
+    "operations": [
+     "PATCH collection"
+    ],
+    "properties": {
+     "conversationIds": "array"
+    },
+    "evidence": [
+     "openapi/_original/genesys-platform-api-openapi-original.json#PATCH /api/v2/conversations/calls/{conversationId}/conference"
+    ]
+   },
+   "infobip": {
+    "segments": [
+     "conferences"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "callId": "string",
+     "endpoint": "object",
+     "state": "string",
+     "joinTime": "string",
+     "leaveTime": "string",
+     "media": "object",
+     "role": "object",
+     "name": "string",
+     "recording": "object",
+     "maxDuration": "integer",
+     "callsConfigurationId": "string",
+     "platform": "object",
+     "status": "string",
+     "muted": "boolean",
+     "deaf": "boolean",
+     "blind": "boolean",
+     "conferenceId": "string",
+     "conferenceName": "string",
+     "composedFiles": "array",
+     "callRecordings": "array",
+     "startTime": "string",
+     "endTime": "string"
+    },
+    "evidence": [
+     "openapi/_original/infobip-platform-full-openapi.json#DELETE /calls/1/recordings/conferences/{conferenceId}",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/conferences",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/conferences/{conferenceId}",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/recordings/conferences",
+     "openapi/_original/infobip-platform-full-openapi.json#GET /calls/1/recordings/conferences/{conferenceId}",
+     "openapi/_original/infobip-platform-full-openapi.json#PATCH /calls/1/conferences/{conferenceId}",
+     "openapi/_original/infobip-platform-full-openapi.json#POST /calls/1/conferences",
+     "openapi/_original/infobip-platform-openapi.json#DELETE /calls/1/recordings/conferences/{conferenceId}",
+     "openapi/_original/infobip-platform-openapi.json#GET /calls/1/conferences",
+     "openapi/_original/infobip-platform-openapi.json#GET /calls/1/conferences/{conferenceId}",
+     "openapi/_original/infobip-platform-openapi.json#GET /calls/1/recordings/conferences",
+     "openapi/_original/infobip-platform-openapi.json#GET /calls/1/recordings/conferences/{conferenceId}"
+    ]
+   },
+   "ringcentral": {
+    "segments": [
+     "bridges",
+     "conference"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "type": "string",
+     "host": "object",
+     "pins": "object",
+     "security": "object",
+     "preferences": "object",
+     "discovery": "object",
+     "status": "object",
+     "muted": "boolean",
+     "standAlone": "boolean",
+     "park": "object",
+     "from": "object",
+     "to": "object",
+     "owner": "object",
+     "direction": "string",
+     "conferenceRole": "string",
+     "ringOutRole": "string",
+     "ringMeRole": "string",
+     "recordings": "array"
+    },
+    "evidence": [
+     "openapi/_original/ringcentral-platform-openapi.yml#DELETE /rcvideo/v2/bridges/{bridgeId}",
+     "openapi/_original/ringcentral-platform-openapi.yml#GET /rcvideo/v2/bridges/{bridgeId}",
+     "openapi/_original/ringcentral-platform-openapi.yml#PATCH /rcvideo/v2/bridges/{bridgeId}",
+     "openapi/_original/ringcentral-platform-openapi.yml#POST /rcvideo/v2/account/{accountId}/extension/{extensionId}/bridges",
+     "openapi/_original/ringcentral-platform-openapi.yml#POST /restapi/v1.0/account/{accountId}/telephony/conference"
+    ]
+   },
+   "signalwire": {
+    "segments": [
+     "conferences"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "uri": "string",
+     "first_page_uri": "string",
+     "next_page_uri": null,
+     "previous_page_uri": null,
+     "page": "integer",
+     "page_size": "integer",
+     "conferences": "array",
+     "sid": null,
+     "account_sid": null,
+     "date_created": "string",
+     "date_updated": "string",
+     "friendly_name": "string",
+     "status": null,
+     "api_version": "string",
+     "region": "string",
+     "subresource_uris": null,
+     "id": null,
+     "created_at": "string",
+     "project_id": null,
+     "name": null,
+     "max_size": null,
+     "current_participants": "integer",
+     "updated_at": "string",
+     "type": "string",
+     "display_name": null,
+     "description": null,
+     "join_from": null,
+     "join_until": null,
+     "quality": null,
+     "layout": null,
+     "size": null,
+     "record_on_start": "boolean",
+     "tone_on_entry_and_exit": "boolean",
+     "user_join_video_off": "boolean",
+     "room_join_video_off": "boolean",
+     "enable_chat": "boolean",
+     "enable_room_previews": null,
+     "dark_primary": null,
+     "dark_background": null,
+     "dark_foreground": null,
+     "dark_success": null,
+     "dark_negative": null,
+     "light_primary": null,
+     "light_background": null,
+     "light_foreground": null,
+     "light_success": null,
+     "light_negative": null,
+     "meta": null,
+     "active_session": null
+    },
+    "evidence": [
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Conferences",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Conferences/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/Conferences/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#GET /Accounts/{AccountSid}/Conferences",
+     "openapi/_original/signalwire-compatibility-openapi.yml#GET /Accounts/{AccountSid}/Conferences/{Sid}",
+     "openapi/_original/signalwire-compatibility-openapi.yml#POST /Accounts/{AccountSid}/Conferences/{Sid}",
+     "openapi/_original/signalwire-rest-openapi.yaml#DELETE /api/video/conferences/{id}",
+     "openapi/_original/signalwire-rest-openapi.yaml#GET /api/logs/conferences",
+     "openapi/_original/signalwire-rest-openapi.yaml#GET /api/video/conferences",
+     "openapi/_original/signalwire-rest-openapi.yaml#GET /api/video/conferences/{id}",
+     "openapi/_original/signalwire-rest-openapi.yaml#POST /api/video/conferences",
+     "openapi/_original/signalwire-rest-openapi.yaml#PUT /api/video/conferences/{id}"
+    ]
+   },
+   "syllable": {
+    "segments": [
+     "bridges"
+    ],
+    "operations": [
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "messages": "array",
+     "randomize_messages": "boolean",
+     "first_slow_messages": "array",
+     "very_slow_messages": "array",
+     "tool_responses": "array",
+     "localized": "object",
+     "smart_turn_timeout_seconds": null
+    },
+    "evidence": [
+     "openapi/_original/syllable-sdk-openapi-original.yml#GET /api/v1/conversation-config/bridges",
+     "openapi/_original/syllable-sdk-openapi-original.yml#PUT /api/v1/conversation-config/bridges"
+    ]
+   },
+   "telnyx": {
+    "segments": [
+     "conferences"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "record_type": "string",
+     "id": "string",
+     "name": "string",
+     "created_at": "string",
+     "expires_at": "string",
+     "updated_at": "string",
+     "region": "string",
+     "status": "string",
+     "end_reason": "string",
+     "ended_by": "object",
+     "connection_id": "string",
+     "call_control_id": "string",
+     "beep_enabled": "string",
+     "client_state": "string",
+     "comfort_noise": "boolean",
+     "command_id": "string",
+     "duration_minutes": "integer",
+     "hold_audio_url": "string",
+     "hold_media_name": "string",
+     "max_participants": "integer",
+     "start_conference_on_create": "boolean",
+     "conferences": "array",
+     "end": "integer",
+     "first_page_uri": "string",
+     "next_page_uri": "string",
+     "page": "integer",
+     "page_size": "integer",
+     "start": "integer",
+     "uri": "string",
+     "account_sid": "string",
+     "api_version": "string",
+     "call_sid_ending_conference": "string",
+     "date_created": "string",
+     "date_updated": "string",
+     "friendly_name": "string",
+     "reason_conference_ended": "string",
+     "sid": "string",
+     "subresource_uris": "object"
+    },
+    "evidence": [
+     "openapi/_original/telnyx-openapi.json#GET /conferences",
+     "openapi/_original/telnyx-openapi.json#GET /conferences/{id}",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Conferences",
+     "openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Conferences/{conference_sid}",
+     "openapi/_original/telnyx-openapi.json#POST /conferences",
+     "openapi/_original/telnyx-openapi.json#POST /texml/Accounts/{account_sid}/Conferences/{conference_sid}",
+     "openapi/_original/telnyx-openapi.yml#GET /conferences",
+     "openapi/_original/telnyx-openapi.yml#GET /conferences/{id}",
+     "openapi/_original/telnyx-openapi.yml#GET /texml/Accounts/{account_sid}/Conferences",
+     "openapi/_original/telnyx-openapi.yml#GET /texml/Accounts/{account_sid}/Conferences/{conference_sid}",
+     "openapi/_original/telnyx-openapi.yml#POST /conferences",
+     "openapi/_original/telnyx-openapi.yml#POST /texml/Accounts/{account_sid}/Conferences/{conference_sid}"
+    ]
+   },
+   "twilio": {
+    "segments": [
+     "conferences"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST item"
+    ],
+    "properties": {
+     "conference_sid": "string",
+     "account_sid": "string",
+     "friendly_name": "string",
+     "create_time": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "duration_seconds": "integer",
+     "connect_duration_seconds": "integer",
+     "status": "string",
+     "max_participants": "integer",
+     "max_concurrent_participants": "integer",
+     "unique_participants": "integer",
+     "end_reason": "string",
+     "ended_by": "string",
+     "mixer_region": "string",
+     "mixer_region_requested": "string",
+     "recording_enabled": "boolean",
+     "detected_issues": null,
+     "tags": "array",
+     "tag_info": null,
+     "processing_state": "string",
+     "url": "string",
+     "links": "object",
+     "sid": "string",
+     "region": "string",
+     "reason_conference_ended": "string",
+     "call_sid_ending_conference": "string",
+     "date_created": "string",
+     "date_updated": "string",
+     "uri": "string",
+     "subresource_uris": "object"
+    },
+    "evidence": [
+     "openapi/_original/insights-openapi-original.yml#GET /v1/Conferences",
+     "openapi/_original/insights-openapi-original.yml#GET /v1/Conferences/{ConferenceSid}",
+     "openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Conferences.json",
+     "openapi/_original/twilio-voice-openapi.yml#GET /Accounts/{AccountSid}/Conferences/{ConferenceSid}.json",
+     "openapi/_original/twilio-voice-openapi.yml#POST /Accounts/{AccountSid}/Conferences/{ConferenceSid}.json"
+    ]
+   },
+   "wazo": {
+    "segments": [
+     "conferences"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "preprocess_subroutine": "string",
+     "pin": "string",
+     "admin_pin": "string",
+     "quiet_join_leave": "boolean",
+     "announce_join_leave": "boolean",
+     "announce_user_count": "boolean",
+     "announce_only_user": "boolean",
+     "music_on_hold": "string",
+     "max_users": "integer",
+     "record": "boolean",
+     "tenant_uuid": "string",
+     "context": "string",
+     "exten": "string",
+     "incalls": "array"
+    },
+    "evidence": [
+     "openapi/_original/wazo-confd-api-openapi.yml#DELETE /conferences/{conference_id}",
+     "openapi/_original/wazo-confd-api-openapi.yml#GET /conferences",
+     "openapi/_original/wazo-confd-api-openapi.yml#GET /conferences/{conference_id}",
+     "openapi/_original/wazo-confd-api-openapi.yml#POST /conferences",
+     "openapi/_original/wazo-confd-api-openapi.yml#PUT /conferences/{conference_id}",
+     "openapi/_original/wazo-confd-openapi-original.yml#DELETE /conferences/{conference_id}",
+     "openapi/_original/wazo-confd-openapi-original.yml#GET /conferences",
+     "openapi/_original/wazo-confd-openapi-original.yml#GET /conferences/{conference_id}",
+     "openapi/_original/wazo-confd-openapi-original.yml#POST /conferences",
+     "openapi/_original/wazo-confd-openapi-original.yml#PUT /conferences/{conference_id}"
+    ]
+   },
+   "webex": {
+    "segments": [
+     "conference"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "callId": "string",
+     "muted": "boolean",
+     "deafened": "boolean",
+     "callIds": "array",
+     "lineOwnerId": "string",
+     "agentId": "string",
+     "to": "string",
+     "destinationType": "string"
+    },
+    "evidence": [
+     "openapi/_original/webex-cloud-calling-openapi.json#DELETE /telephony/conference",
+     "openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/conference",
+     "openapi/_original/webex-cloud-calling-openapi.json#POST /telephony/conference",
+     "openapi/_original/webex-cloud-calling-openapi.yml#DELETE /telephony/conference",
+     "openapi/_original/webex-cloud-calling-openapi.yml#DELETE /telephony/conference/members/me/conference",
+     "openapi/_original/webex-cloud-calling-openapi.yml#GET /telephony/conference",
+     "openapi/_original/webex-cloud-calling-openapi.yml#GET /telephony/conference/members/me/conference",
+     "openapi/_original/webex-cloud-calling-openapi.yml#POST /telephony/conference",
+     "openapi/_original/webex-cloud-calling-openapi.yml#POST /telephony/conference/members/me/conference",
+     "openapi/_original/webex-contact-center-openapi.json#POST /v1/tasks/{taskId}/consult/conference"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "46elks",
+    "8x8",
+    "aaaai-me",
+    "actionpower",
+    "africastalking",
+    "agentphone",
+    "aircall",
+    "algebras-ai-inc",
+    "alianza",
+    "amazon",
+    "amazon-lex",
+    "amazon-pinpoint",
+    "amazon-polly",
+    "amigo",
+    "anam",
+    "assemblyai",
+    "bandwidth",
+    "bharti-airtel",
+    "bird",
+    "bitrix24",
+    "bland-ai",
+    "bright-pattern",
+    "callrail",
+    "cartesia-ai",
+    "cisco-collaboration-hybrid-solutions",
+    "cisco-control-hub",
+    "cisco-expressway",
+    "cisco-voice-portal",
+    "clicksend",
+    "clicksend-sms",
+    "close",
+    "cloudtalk",
+    "cm-com",
+    "cometchat",
+    "daily",
+    "daily-co",
+    "deepdub",
+    "deepgram",
+    "dialnexa",
+    "dialpad",
+    "discord",
+    "dyte",
+    "elbo-ai-inc",
+    "elevenlabs",
+    "engagespark",
+    "epic-games",
+    "fish-audio",
+    "fixie",
+    "genesys",
+    "gladly",
+    "google-voice",
+    "gridspace",
+    "happyrobot",
+    "hatch",
+    "heidi-health",
+    "hume-ai",
+    "infobip",
+    "invoca",
+    "inworld",
+    "inworld-ai",
+    "justcall",
+    "kaleyra",
+    "kalpa-labs",
+    "keyframe-labs",
+    "koreai",
+    "kpn",
+    "kugelaudio",
+    "layercode",
+    "listnr",
+    "matrix",
+    "messagebird",
+    "minimax-ai",
+    "murf",
+    "nabla",
+    "narakeet",
+    "netomi",
+    "neutrino-api",
+    "nextiva",
+    "nfon",
+    "numbers-online",
+    "openphone",
+    "orange-business",
+    "outrival",
+    "phone-com",
+    "phonic",
+    "pipecat-ai",
+    "playht",
+    "quo",
+    "rainbow",
+    "reliance-jio",
+    "resemble-ai",
+    "retell-ai",
+    "rime-ai",
+    "ringcentral",
+    "route-mobile",
+    "rtcstats",
+    "saperly",
+    "sarj-ai-developer-api",
+    "sarvam",
+    "sendbird",
+    "sendhub",
+    "signalwire",
+    "sinch",
+    "slng",
+    "smallest-ai",
+    "smsapi",
+    "sobot",
+    "sonde-health",
+    "sonetel",
+    "speechify",
+    "speechmatics",
+    "speko",
+    "spruce-health",
+    "subspace",
+    "swisscom",
+    "syllable",
+    "synthesia",
+    "synthflow",
+    "tata-communications",
+    "telesign",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "thoughtly",
+    "twilio",
+    "uberduck",
+    "unifonic",
+    "unrealspeech",
+    "vapi",
+    "vapi-ai",
+    "vocode",
+    "voiceflow",
+    "voiceitt",
+    "vonage",
+    "voygr",
+    "wazo",
+    "weave",
+    "webex",
+    "wellsaid",
+    "whippy",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zavu",
+    "zoom-phone"
+   ],
+   "kebab-case": [
+    "8x8",
+    "aaaai-me",
+    "actionpower",
+    "agentphone",
+    "algebras-ai-inc",
+    "alianza",
+    "amazon-pinpoint",
+    "amigo",
+    "anam",
+    "assemblyai",
+    "bharti-airtel",
+    "bird",
+    "cartesia-ai",
+    "clicksend",
+    "clicksend-sms",
+    "cloudtalk",
+    "cm-com",
+    "daily",
+    "daily-co",
+    "deepdub",
+    "dialnexa",
+    "discord",
+    "dyte",
+    "elbo-ai-inc",
+    "elevenlabs",
+    "epic-games",
+    "fish-audio",
+    "gladly",
+    "gridspace",
+    "happyrobot",
+    "heidi-health",
+    "infobip",
+    "justcall",
+    "kaleyra",
+    "keyframe-labs",
+    "kpn",
+    "kugelaudio",
+    "messagebird",
+    "murf",
+    "nabla",
+    "narakeet",
+    "netomi",
+    "neutrino-api",
+    "nextiva",
+    "nfon",
+    "numbers-online",
+    "openphone",
+    "orange-business",
+    "outrival",
+    "phone-com",
+    "phonic",
+    "pipecat-ai",
+    "playht",
+    "quo",
+    "resemble-ai",
+    "retell-ai",
+    "ringcentral",
+    "route-mobile",
+    "saperly",
+    "sarj-ai-developer-api",
+    "sarvam",
+    "signalwire",
+    "sinch",
+    "slng",
+    "smallest-ai",
+    "sonde-health",
+    "sonetel",
+    "speechmatics",
+    "speko",
+    "subspace",
+    "syllable",
+    "synthesia",
+    "synthflow",
+    "telesign",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "twilio",
+    "uberduck",
+    "unifonic",
+    "vapi",
+    "vapi-ai",
+    "vonage",
+    "voygr",
+    "wazo",
+    "weave",
+    "webex",
+    "wellsaid",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zavu"
+   ],
+   "snake_case": [
+    "8x8",
+    "alianza",
+    "amazon-pinpoint",
+    "amigo",
+    "bharti-airtel",
+    "bright-pattern",
+    "close",
+    "cometchat",
+    "deepdub",
+    "dialpad",
+    "elevenlabs",
+    "fixie",
+    "hume-ai",
+    "invoca",
+    "justcall",
+    "kotoba",
+    "kpn",
+    "layercode",
+    "minimax-ai",
+    "netomi",
+    "orange-business",
+    "phonic",
+    "reliance-jio",
+    "resemble-ai",
+    "route-mobile",
+    "sendbird",
+    "signalwire",
+    "sinch",
+    "smallest-ai",
+    "smsapi",
+    "sobot",
+    "sonetel",
+    "syllable",
+    "synthflow",
+    "telesign",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "twilio",
+    "voiceitt",
+    "vonage",
+    "wazo",
+    "weave",
+    "webex",
+    "whippy",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zoom-phone"
+   ],
+   "camelCase": [
+    "8x8",
+    "africastalking",
+    "alianza",
+    "amazon",
+    "amazon-lex",
+    "amazon-polly",
+    "bandwidth",
+    "bharti-airtel",
+    "bright-pattern",
+    "cisco-control-hub",
+    "cisco-voice-portal",
+    "cloudtalk",
+    "cm-com",
+    "daily",
+    "daily-co",
+    "infobip",
+    "kpn",
+    "matrix",
+    "netomi",
+    "nextiva",
+    "nfon",
+    "orange-business",
+    "reliance-jio",
+    "route-mobile",
+    "sinch",
+    "sobot",
+    "spruce-health",
+    "swisscom",
+    "synthesia",
+    "tata-communications",
+    "teliax",
+    "telnyx",
+    "unifonic",
+    "unrealspeech",
+    "vonage",
+    "webex"
+   ],
+   "other": [
+    "alianza",
+    "amazon-pinpoint",
+    "amigo",
+    "bitrix24",
+    "cm-com",
+    "discord",
+    "gladly",
+    "heidi-health",
+    "infobip",
+    "inworld",
+    "inworld-ai",
+    "kpn",
+    "kugelaudio",
+    "nfon",
+    "phone-com",
+    "ringcentral",
+    "route-mobile",
+    "sarj-ai-developer-api",
+    "sinch",
+    "slng",
+    "smsapi",
+    "sobot",
+    "synthesia",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "twilio",
+    "unifonic",
+    "vonage",
+    "webex",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zavu"
+   ],
+   "PascalCase": [
+    "amazon-lex",
+    "bright-pattern",
+    "kpn",
+    "nfon",
+    "plivo",
+    "ringcentral",
+    "route-mobile",
+    "signalwire",
+    "tata-communications",
+    "telesign",
+    "telnyx",
+    "twilio",
+    "unifonic",
+    "wazo",
+    "webex"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "46elks",
+    "8x8",
+    "aaaai-me",
+    "africastalking",
+    "agentphone",
+    "algebras-ai-inc",
+    "alianza",
+    "amazon",
+    "amazon-pinpoint",
+    "amigo",
+    "anam",
+    "assemblyai",
+    "bandwidth",
+    "bharti-airtel",
+    "bird",
+    "bland-ai",
+    "bright-pattern",
+    "callrail",
+    "cartesia-ai",
+    "cisco-collaboration-hybrid-solutions",
+    "cisco-control-hub",
+    "cisco-expressway",
+    "cisco-voice-portal",
+    "clicksend",
+    "clicksend-sms",
+    "close",
+    "cloudtalk",
+    "cm-com",
+    "cometchat",
+    "daily",
+    "daily-co",
+    "deepdub",
+    "deepgram",
+    "dialnexa",
+    "discord",
+    "elevenlabs",
+    "engagespark",
+    "epic-games",
+    "fish-audio",
+    "fixie",
+    "genesys",
+    "gladly",
+    "google-voice",
+    "gridspace",
+    "happyrobot",
+    "heidi-health",
+    "hume-ai",
+    "infobip",
+    "inworld-ai",
+    "justcall",
+    "kaleyra",
+    "keyframe-labs",
+    "koreai",
+    "kpn",
+    "kugelaudio",
+    "listnr",
+    "matrix",
+    "messagebird",
+    "minimax-ai",
+    "murf",
+    "narakeet",
+    "netomi",
+    "neutrino-api",
+    "nextiva",
+    "nfon",
+    "numbers-online",
+    "openphone",
+    "orange-business",
+    "outrival",
+    "phone-com",
+    "phonic",
+    "plivo",
+    "quo",
+    "rainbow",
+    "reliance-jio",
+    "resemble-ai",
+    "retell-ai",
+    "rime-ai",
+    "ringcentral",
+    "route-mobile",
+    "rtcstats",
+    "saperly",
+    "sarj-ai-developer-api",
+    "sendbird",
+    "sendhub",
+    "signalwire",
+    "sinch",
+    "slng",
+    "smsapi",
+    "sobot",
+    "sonde-health",
+    "sonetel",
+    "speechmatics",
+    "speko",
+    "spruce-health",
+    "subspace",
+    "swisscom",
+    "syllable",
+    "synthflow",
+    "tata-communications",
+    "telesign",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "thoughtly",
+    "twilio",
+    "uberduck",
+    "unifonic",
+    "vapi",
+    "vapi-ai",
+    "vocode",
+    "vonage",
+    "voygr",
+    "wazo",
+    "weave",
+    "webex",
+    "wellsaid",
+    "whippy",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zavu",
+    "zoom-phone"
+   ],
+   "snake_case": [
+    "agentphone",
+    "alianza",
+    "amigo",
+    "assemblyai",
+    "bird",
+    "bland-ai",
+    "callrail",
+    "cartesia-ai",
+    "cisco-expressway",
+    "close",
+    "cloudtalk",
+    "cm-com",
+    "daily",
+    "daily-co",
+    "deepdub",
+    "deepgram",
+    "dialnexa",
+    "discord",
+    "dyte",
+    "elevenlabs",
+    "fish-audio",
+    "fixie",
+    "happyrobot",
+    "heidi-health",
+    "hume-ai",
+    "infobip",
+    "justcall",
+    "kaleyra",
+    "kpn",
+    "kugelaudio",
+    "matrix",
+    "minimax-ai",
+    "netomi",
+    "nfon",
+    "numbers-online",
+    "phone-com",
+    "phonic",
+    "plivo",
+    "resemble-ai",
+    "retell-ai",
+    "ringcentral",
+    "route-mobile",
+    "sarj-ai-developer-api",
+    "sarvam",
+    "sendbird",
+    "signalwire",
+    "sinch",
+    "slng",
+    "smsapi",
+    "sobot",
+    "sonetel",
+    "speechmatics",
+    "speko",
+    "syllable",
+    "synthflow",
+    "telesign",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "thoughtly",
+    "twilio",
+    "uberduck",
+    "vocode",
+    "vonage",
+    "voygr",
+    "wazo",
+    "weave",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zoom-phone"
+   ],
+   "camelCase": [
+    "8x8",
+    "africastalking",
+    "agentphone",
+    "algebras-ai-inc",
+    "alianza",
+    "amazon",
+    "amazon-lex",
+    "amazon-pinpoint",
+    "anam",
+    "bandwidth",
+    "bharti-airtel",
+    "bird",
+    "bright-pattern",
+    "cisco-collaboration-hybrid-solutions",
+    "cisco-control-hub",
+    "cisco-voice-portal",
+    "cloudtalk",
+    "cm-com",
+    "cometchat",
+    "daily",
+    "daily-co",
+    "dialnexa",
+    "engagespark",
+    "epic-games",
+    "fixie",
+    "genesys",
+    "gladly",
+    "google-voice",
+    "happyrobot",
+    "infobip",
+    "inworld-ai",
+    "koreai",
+    "kpn",
+    "listnr",
+    "messagebird",
+    "netomi",
+    "nextiva",
+    "openphone",
+    "orange-business",
+    "outrival",
+    "quo",
+    "reliance-jio",
+    "ringcentral",
+    "route-mobile",
+    "rtcstats",
+    "saperly",
+    "sinch",
+    "sobot",
+    "sonde-health",
+    "speko",
+    "spruce-health",
+    "swisscom",
+    "tata-communications",
+    "teliax",
+    "telnyx",
+    "thoughtly",
+    "twilio",
+    "unifonic",
+    "vapi",
+    "vapi-ai",
+    "vonage",
+    "webex",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zavu"
+   ],
+   "other": [
+    "8x8",
+    "amigo",
+    "bharti-airtel",
+    "cartesia-ai",
+    "close",
+    "genesys",
+    "kpn",
+    "netomi",
+    "orange-business",
+    "phone-com",
+    "route-mobile",
+    "signalwire",
+    "sinch",
+    "sobot",
+    "telnyx",
+    "twilio",
+    "whippy"
+   ],
+   "PascalCase": [
+    "amazon-polly",
+    "cm-com",
+    "minimax-ai",
+    "signalwire",
+    "sonetel",
+    "telnyx",
+    "twilio",
+    "unifonic",
+    "unrealspeech",
+    "wazo"
+   ],
+   "kebab-case": [
+    "8x8",
+    "alianza",
+    "amazon-pinpoint",
+    "kpn",
+    "narakeet",
+    "neutrino-api",
+    "route-mobile"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "46elks",
+    "8x8",
+    "aaaai-me",
+    "agentphone",
+    "algebras-ai-inc",
+    "amigo",
+    "assemblyai",
+    "bandwidth",
+    "bird",
+    "bland-ai",
+    "cartesia-ai",
+    "cisco-voice-portal",
+    "clicksend",
+    "clicksend-sms",
+    "close",
+    "cloudtalk",
+    "daily",
+    "daily-co",
+    "deepdub",
+    "deepgram",
+    "dialnexa",
+    "discord",
+    "elevenlabs",
+    "engagespark",
+    "epic-games",
+    "genesys",
+    "happyrobot",
+    "hume-ai",
+    "infobip",
+    "justcall",
+    "keyframe-labs",
+    "kpn",
+    "kugelaudio",
+    "matrix",
+    "messagebird",
+    "murf",
+    "neutrino-api",
+    "nextiva",
+    "nfon",
+    "numbers-online",
+    "openphone",
+    "orange-business",
+    "outrival",
+    "phone-com",
+    "phonic",
+    "plivo",
+    "rainbow",
+    "reliance-jio",
+    "retell-ai",
+    "rime-ai",
+    "route-mobile",
+    "rtcstats",
+    "sarj-ai-developer-api",
+    "sendbird",
+    "sendhub",
+    "smsapi",
+    "speechmatics",
+    "speko",
+    "subspace",
+    "syllable",
+    "synthflow",
+    "teliax",
+    "telnyx",
+    "thoughtly",
+    "twilio",
+    "uberduck",
+    "unifonic",
+    "vapi",
+    "vapi-ai",
+    "voygr",
+    "wazo",
+    "weave",
+    "webex",
+    "whippy",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zavu"
+   ],
+   "page": [
+    "8x8",
+    "algebras-ai-inc",
+    "anam",
+    "bharti-airtel",
+    "bird",
+    "callrail",
+    "clicksend",
+    "clicksend-sms",
+    "cloudtalk",
+    "cm-com",
+    "cometchat",
+    "dialnexa",
+    "elevenlabs",
+    "engagespark",
+    "happyrobot",
+    "infobip",
+    "justcall",
+    "kpn",
+    "messagebird",
+    "minimax-ai",
+    "orange-business",
+    "outrival",
+    "resemble-ai",
+    "ringcentral",
+    "rtcstats",
+    "signalwire",
+    "sinch",
+    "slng",
+    "swisscom",
+    "syllable",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "thoughtly",
+    "twilio",
+    "vapi",
+    "vapi-ai",
+    "vocode",
+    "vonage",
+    "webex",
+    "wispr-ai",
+    "wisprflow-ai"
+   ],
+   "offset": [
+    "8x8",
+    "agentphone",
+    "amigo",
+    "bharti-airtel",
+    "bird",
+    "cisco-control-hub",
+    "cisco-voice-portal",
+    "cloudtalk",
+    "daily",
+    "daily-co",
+    "discord",
+    "elevenlabs",
+    "happyrobot",
+    "infobip",
+    "justcall",
+    "kugelaudio",
+    "messagebird",
+    "nextiva",
+    "nfon",
+    "orange-business",
+    "phone-com",
+    "plivo",
+    "rainbow",
+    "reliance-jio",
+    "sendhub",
+    "smsapi",
+    "synthflow",
+    "teliax",
+    "twilio",
+    "uberduck",
+    "vonage",
+    "wazo",
+    "webex",
+    "whippy",
+    "wispr-ai",
+    "wisprflow-ai"
+   ],
+   "page_size": [
+    "8x8",
+    "alianza",
+    "amazon-pinpoint",
+    "bharti-airtel",
+    "cm-com",
+    "elevenlabs",
+    "fish-audio",
+    "fixie",
+    "genesys",
+    "happyrobot",
+    "heidi-health",
+    "hume-ai",
+    "infobip",
+    "inworld-ai",
+    "kpn",
+    "nextiva",
+    "resemble-ai",
+    "route-mobile",
+    "signalwire",
+    "sinch",
+    "slng",
+    "sobot",
+    "spruce-health",
+    "synthflow",
+    "tata-communications",
+    "telnyx",
+    "twilio",
+    "vonage",
+    "webex",
+    "zoom-phone"
+   ],
+   "cursor": [
+    "8x8",
+    "bird",
+    "cloudtalk",
+    "cm-com",
+    "deepgram",
+    "elevenlabs",
+    "fixie",
+    "genesys",
+    "happyrobot",
+    "infobip",
+    "nextiva",
+    "sarj-ai-developer-api",
+    "speko",
+    "synthflow",
+    "teliax",
+    "telnyx",
+    "vonage",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zavu"
+   ],
+   "size": [
+    "8x8",
+    "bharti-airtel",
+    "cm-com",
+    "engagespark",
+    "infobip",
+    "kpn",
+    "minimax-ai",
+    "orange-business",
+    "sinch",
+    "sonetel",
+    "swisscom",
+    "teliax",
+    "the-mobile-first-company",
+    "vocode",
+    "vonage",
+    "webex"
+   ],
+   "start": [
+    "46elks",
+    "cartesia-ai",
+    "close",
+    "deepgram",
+    "fixie",
+    "genesys",
+    "happyrobot",
+    "nextiva",
+    "twilio",
+    "weave",
+    "webex",
+    "wispr-ai",
+    "wisprflow-ai"
+   ],
+   "per_page": [
+    "anam",
+    "bird",
+    "callrail",
+    "cm-com",
+    "cometchat",
+    "dyte",
+    "justcall",
+    "kpn",
+    "messagebird",
+    "resemble-ai",
+    "ringcentral",
+    "teliax",
+    "telnyx"
+   ],
+   "after": [
+    "agentphone",
+    "bird",
+    "cm-com",
+    "discord",
+    "engagespark",
+    "genesys",
+    "keyframe-labs",
+    "openphone",
+    "phonic",
+    "sinch",
+    "telnyx",
+    "webex"
+   ],
+   "page_token": [
+    "bandwidth",
+    "bird",
+    "google-voice",
+    "happyrobot",
+    "inworld-ai",
+    "openphone",
+    "quo",
+    "ringcentral",
+    "signalwire",
+    "sinch",
+    "telnyx",
+    "twilio"
+   ],
+   "before": [
+    "agentphone",
+    "bird",
+    "cisco-collaboration-hybrid-solutions",
+    "discord",
+    "genesys",
+    "phonic",
+    "rainbow",
+    "sinch",
+    "subspace",
+    "webex"
+   ],
+   "count": [
+    "amazon",
+    "amigo",
+    "cloudtalk",
+    "genesys",
+    "ringcentral",
+    "sonetel",
+    "vonage",
+    "wazo",
+    "webex",
+    "zoom-phone"
+   ],
+   "max_results": [
+    "alianza",
+    "amazon-polly",
+    "genesys",
+    "google-voice",
+    "kpn",
+    "openphone",
+    "quo",
+    "signalwire"
+   ],
+   "starting_after": [
+    "bird",
+    "cartesia-ai",
+    "daily",
+    "daily-co",
+    "kpn",
+    "outrival"
+   ],
+   "skip": [
+    "close",
+    "cm-com",
+    "wazo"
+   ],
+   "next": [
+    "murf",
+    "webex"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "46elks",
+    "8x8",
+    "actionpower",
+    "aircall",
+    "algebras-ai-inc",
+    "alianza",
+    "amazon-pinpoint",
+    "amigo",
+    "anam",
+    "bharti-airtel",
+    "bird",
+    "bright-pattern",
+    "cartesia-ai",
+    "clicksend",
+    "close",
+    "cloudtalk",
+    "cm-com",
+    "cometchat",
+    "daily",
+    "daily-co",
+    "deepdub",
+    "deepgram",
+    "dialnexa",
+    "dialpad",
+    "discord",
+    "elevenlabs",
+    "engagespark",
+    "epic-games",
+    "fish-audio",
+    "gladly",
+    "happyrobot",
+    "hume-ai",
+    "infobip",
+    "inworld",
+    "justcall",
+    "kaleyra",
+    "koreai",
+    "kpn",
+    "messagebird",
+    "narakeet",
+    "nextiva",
+    "nfon",
+    "numbers-online",
+    "openphone",
+    "orange-business",
+    "outrival",
+    "phone-com",
+    "phonic",
+    "pipecat-ai",
+    "quo",
+    "resemble-ai",
+    "rime-ai",
+    "ringcentral",
+    "rtcstats",
+    "saperly",
+    "sarj-ai-developer-api",
+    "signalwire",
+    "sinch",
+    "slng",
+    "smsapi",
+    "sobot",
+    "sonetel",
+    "speechify",
+    "speechmatics",
+    "speko",
+    "subspace",
+    "synthflow",
+    "tata-communications",
+    "telesign",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "thoughtly",
+    "twilio",
+    "vapi",
+    "vapi-ai",
+    "vonage",
+    "wazo",
+    "webex",
+    "whippy",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zavu",
+    "zoom-phone"
+   ],
+   "camelCase": [
+    "8x8",
+    "actionpower",
+    "algebras-ai-inc",
+    "alianza",
+    "amazon",
+    "amazon-lex",
+    "bandwidth",
+    "bharti-airtel",
+    "bird",
+    "bright-pattern",
+    "cisco-collaboration-hybrid-solutions",
+    "cisco-control-hub",
+    "cisco-voice-portal",
+    "cloudtalk",
+    "cm-com",
+    "cometchat",
+    "daily",
+    "daily-co",
+    "dialnexa",
+    "dyte",
+    "elbo-ai-inc",
+    "engagespark",
+    "epic-games",
+    "genesys",
+    "gladly",
+    "google-voice",
+    "happyrobot",
+    "infobip",
+    "inworld-ai",
+    "koreai",
+    "kpn",
+    "listnr",
+    "matrix",
+    "messagebird",
+    "netomi",
+    "nextiva",
+    "nfon",
+    "openphone",
+    "orange-business",
+    "outrival",
+    "phonic",
+    "playht",
+    "quo",
+    "rainbow",
+    "reliance-jio",
+    "ringcentral",
+    "rtcstats",
+    "saperly",
+    "signalwire",
+    "sinch",
+    "slng",
+    "smallest-ai",
+    "smsapi",
+    "sobot",
+    "sonetel",
+    "speko",
+    "spruce-health",
+    "swisscom",
+    "synthesia",
+    "tata-communications",
+    "teliax",
+    "telnyx",
+    "twilio",
+    "unifonic",
+    "vapi",
+    "vapi-ai",
+    "voiceflow",
+    "vonage",
+    "webex",
+    "zavu",
+    "zoom-phone"
+   ],
+   "snake_case": [
+    "aaaai-me",
+    "agentphone",
+    "amigo",
+    "assemblyai",
+    "bird",
+    "bland-ai",
+    "bright-pattern",
+    "callrail",
+    "cartesia-ai",
+    "clicksend",
+    "clicksend-sms",
+    "close",
+    "cloudtalk",
+    "cm-com",
+    "daily",
+    "daily-co",
+    "deepdub",
+    "deepgram",
+    "dialpad",
+    "discord",
+    "elevenlabs",
+    "fish-audio",
+    "fixie",
+    "gridspace",
+    "happyrobot",
+    "heidi-health",
+    "hume-ai",
+    "invoca",
+    "justcall",
+    "kaleyra",
+    "kalpa-labs",
+    "keyframe-labs",
+    "kotoba",
+    "kpn",
+    "kugelaudio",
+    "layercode",
+    "murf",
+    "nabla",
+    "phone-com",
+    "pipecat-ai",
+    "plivo",
+    "resemble-ai",
+    "retell-ai",
+    "route-mobile",
+    "sarj-ai-developer-api",
+    "sarvam",
+    "sendbird",
+    "sendhub",
+    "signalwire",
+    "sinch",
+    "slng",
+    "sonetel",
+    "speechmatics",
+    "syllable",
+    "synthflow",
+    "telesign",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "thoughtly",
+    "twilio",
+    "vonage",
+    "voygr",
+    "wazo",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zoom-phone"
+   ],
+   "kebab-case": [
+    "8x8",
+    "amazon-pinpoint",
+    "sonetel",
+    "telnyx",
+    "wellsaid"
+   ],
+   "PascalCase": [
+    "amazon-polly",
+    "outrival",
+    "signalwire",
+    "twilio"
+   ],
+   "other": [
+    "cm-com",
+    "kpn",
+    "sarj-ai-developer-api"
+   ]
+  },
+  "property": {
+   "lower": [
+    "46elks",
+    "8x8",
+    "actionpower",
+    "africastalking",
+    "agentphone",
+    "amigo",
+    "bandwidth",
+    "bird",
+    "bland-ai",
+    "callrail",
+    "cartesia-ai",
+    "cisco-voice-portal",
+    "close",
+    "cloudtalk",
+    "daily",
+    "daily-co",
+    "dialnexa",
+    "dyte",
+    "elevenlabs",
+    "fixie",
+    "genesys",
+    "happyrobot",
+    "heidi-health",
+    "infobip",
+    "justcall",
+    "kpn",
+    "messagebird",
+    "nfon",
+    "openphone",
+    "phone-com",
+    "quo",
+    "resemble-ai",
+    "ringcentral",
+    "saperly",
+    "sarj-ai-developer-api",
+    "signalwire",
+    "sinch",
+    "slng",
+    "sonetel",
+    "speechmatics",
+    "speko",
+    "spruce-health",
+    "syllable",
+    "synthflow",
+    "telesign",
+    "teliax",
+    "telnyx",
+    "the-mobile-first-company",
+    "thoughtly",
+    "twilio",
+    "unifonic",
+    "vapi",
+    "vapi-ai",
+    "vocode",
+    "vonage",
+    "voygr",
+    "wazo",
+    "weave",
+    "webex",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zoom-phone"
+   ],
+   "snake_case": [
+    "amigo",
+    "bird",
+    "bland-ai",
+    "callrail",
+    "cartesia-ai",
+    "close",
+    "cloudtalk",
+    "daily",
+    "daily-co",
+    "dialnexa",
+    "dyte",
+    "elevenlabs",
+    "heidi-health",
+    "justcall",
+    "kpn",
+    "nfon",
+    "phone-com",
+    "resemble-ai",
+    "sarj-ai-developer-api",
+    "signalwire",
+    "slng",
+    "speko",
+    "syllable",
+    "synthflow",
+    "telesign",
+    "telnyx",
+    "the-mobile-first-company",
+    "thoughtly",
+    "twilio",
+    "vocode",
+    "vonage",
+    "voygr",
+    "wazo",
+    "weave",
+    "wispr-ai",
+    "wisprflow-ai",
+    "zoom-phone"
+   ],
+   "camelCase": [
+    "8x8",
+    "actionpower",
+    "africastalking",
+    "agentphone",
+    "bandwidth",
+    "bird",
+    "cisco-voice-portal",
+    "cloudtalk",
+    "daily",
+    "daily-co",
+    "fixie",
+    "genesys",
+    "infobip",
+    "messagebird",
+    "openphone",
+    "quo",
+    "ringcentral",
+    "saperly",
+    "sinch",
+    "speko",
+    "spruce-health",
+    "twilio",
+    "unifonic",
+    "vapi",
+    "vapi-ai",
+    "webex"
+   ],
+   "other": [
+    "close",
+    "kpn",
+    "vonage"
+   ],
+   "PascalCase": [
+    "cisco-expressway",
+    "telnyx"
+   ]
+  }
+ }
+}

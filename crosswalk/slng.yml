@@ -1,0 +1,22 @@
+provider: slng
+apis_io: https://apis.io/providers/slng/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at: created_at
+      id: id
+      direction: call_direction
+      call_id: call_id
+      agent_id: agent_id
+      updated_at: updated_at
+      phone_number: phone_number
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/slng-agents-openapi.yml#GET /v1/agents/{agent_id}/calls
+    - openapi/_original/slng-agents-openapi.yml#GET /v1/agents/{agent_id}/calls/{call_id}
+    - openapi/_original/slng-agents-openapi.yml#POST /v1/agents/{agent_id}/calls

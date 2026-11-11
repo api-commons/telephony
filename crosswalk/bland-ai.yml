@@ -1,0 +1,21 @@
+provider: bland-ai
+apis_io: https://apis.io/providers/bland-ai/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at: created_at
+      from: from
+      to: to
+      call_id: call_id
+      phone_number: phone_number
+      metadata: metadata
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/bland-ai-openapi.yml#GET /v1/calls
+    - openapi/_original/bland-ai-openapi.yml#GET /v1/calls/{call_id}
+    - openapi/_original/bland-ai-openapi.yml#POST /v1/calls

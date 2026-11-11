@@ -1,0 +1,15 @@
+provider: synthflow
+apis_io: https://apis.io/providers/synthflow/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/synthflow-openapi.json#GET /calls
+    - openapi/_original/synthflow-openapi.json#GET /calls/{call_id}
+    - openapi/_original/synthflow-openapi.json#POST /calls

@@ -1,0 +1,21 @@
+provider: nfon
+apis_io: https://apis.io/providers/nfon/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: state
+      id: uuid
+      direction: direction
+      from: caller
+      to: callee
+      agent_id: extension
+      updated_at: updated
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/nfon-cti-api-openapi.yml#DELETE /extensions/phone/calls/{uuid}
+    - openapi/_original/nfon-cti-api-openapi.yml#GET /extensions/phone/calls
+    - openapi/_original/nfon-cti-api-openapi.yml#POST /extensions/phone/calls

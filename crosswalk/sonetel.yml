@@ -1,0 +1,16 @@
+provider: sonetel
+apis_io: https://apis.io/providers/sonetel/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - call
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/7_users.yaml#GET /account/{accountid}/user/{userid}/call
+    - openapi/_original/7_users.yaml#POST /account/{accountid}/user/{userid}/call
+    - openapi/_original/sonetel-7-users-openapi.yml#GET /account/{accountid}/user/{userid}/call
+    - openapi/_original/sonetel-7-users-openapi.yml#POST /account/{accountid}/user/{userid}/call
+    - openapi/_original/sonetel-users-openapi.yml#GET /account/{accountid}/user/{userid}/call

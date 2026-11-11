@@ -1,0 +1,40 @@
+provider: speko
+apis_io: https://apis.io/providers/speko/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at: created_at
+      id: id
+      ended_at: ended_at
+      call_id: call_id
+      duration: duration_seconds
+      agent_id: agent_id
+      updated_at: updated_at
+      metadata: metadata
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/speko-openapi-original.json#GET /v1/agents/{id}/calls
+    - openapi/_original/speko-openapi-original.json#GET /v1/calls/{id}
+  recording:
+    path_segment:
+    - recording
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/speko-openapi-original.json#GET /v1/calls/{id}/recording
+    - openapi/_original/speko-openapi-original.json#GET /v1/sessions/{id}/recording
+  transcription:
+    path_segment:
+    - transcript
+    properties:
+      id: id
+      created_at: startedAt
+      text: text
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/speko-openapi-original.json#GET /v1/sessions/{id}/transcript

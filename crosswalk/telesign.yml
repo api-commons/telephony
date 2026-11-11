@@ -1,0 +1,13 @@
+provider: telesign
+apis_io: https://apis.io/providers/telesign/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - call
+    properties:
+      status: status
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/telesign-voice-verify-api-openapi.json#POST /v1/verify/call

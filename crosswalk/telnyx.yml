@@ -1,0 +1,129 @@
+provider: telnyx
+apis_io: https://apis.io/providers/telnyx/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    - call
+    properties:
+      status: status
+      created_at:
+      - start_time
+      - date_created
+      - created_at
+      id:
+      - sid
+      - id
+      direction:
+      - direction
+      - type
+      from:
+      - from
+      - From
+      - CallerId
+      - from_formatted
+      to:
+      - to
+      - To
+      - to_formatted
+      ended_at: end_time
+      call_id: call_sid
+      duration:
+      - call_duration
+      - duration
+      agent_id: extension
+      updated_at:
+      - date_updated
+      - updated_at
+      phone_number: phone_number
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telnyx-openapi.json#DELETE /queues/{queue_name}/calls/{call_control_id}
+    - openapi/_original/telnyx-openapi.json#GET /calls/{call_control_id}
+    - openapi/_original/telnyx-openapi.json#GET /queues/{queue_name}/calls
+    - openapi/_original/telnyx-openapi.json#GET /queues/{queue_name}/calls/{call_control_id}
+    - openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Calls
+  recording:
+    path_segment:
+    - recordings
+    properties:
+      id:
+      - id
+      - sid
+      created_at:
+      - created_at
+      - date_created
+      - start_time
+      duration: duration
+      status: status
+      call_id: call_sid
+      updated_at:
+      - updated_at
+      - date_updated
+      channels: channels
+      url: media_url
+      account_sid: account_sid
+      conference_sid: conference_sid
+      page_size: page_size
+      price: price
+      price_unit: price_unit
+      source: source
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telnyx-openapi.json#DELETE /recordings/{recording_id}
+    - openapi/_original/telnyx-openapi.json#DELETE /texml/Accounts/{account_sid}/Recordings/{recording_sid}.json
+    - openapi/_original/telnyx-openapi.json#GET /meeting_sessions/{id}/recordings
+    - openapi/_original/telnyx-openapi.json#GET /recordings
+    - openapi/_original/telnyx-openapi.json#GET /recordings/{recording_id}
+  transcription:
+    path_segment:
+    - transcriptions
+    - transcription
+    - transcript
+    properties:
+      id: sid
+      created_at: date_created
+      status: status
+      text:
+      - text
+      - transcription_text
+      updated_at: date_updated
+      duration: duration
+      account_sid: account_sid
+      confidence: confidence
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telnyx-openapi.json#DELETE /texml/Accounts/{account_sid}/Transcriptions/{recording_transcription_sid}.json
+    - openapi/_original/telnyx-openapi.json#GET /meeting_sessions/{id}/transcript
+    - openapi/_original/telnyx-openapi.json#GET /speech-to-text/transcription
+    - openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Transcriptions.json
+    - openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Transcriptions/{recording_transcription_sid}.json
+  conference:
+    path_segment:
+    - conferences
+    properties:
+      id:
+      - id
+      - sid
+      status: status
+      created_at:
+      - created_at
+      - date_created
+      name: name
+      account_sid: account_sid
+      friendly_name: friendly_name
+      region: region
+      subresource_uris: subresource_uris
+      updated_at:
+      - updated_at
+      - date_updated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telnyx-openapi.json#GET /conferences
+    - openapi/_original/telnyx-openapi.json#GET /conferences/{id}
+    - openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Conferences
+    - openapi/_original/telnyx-openapi.json#GET /texml/Accounts/{account_sid}/Conferences/{conference_sid}
+    - openapi/_original/telnyx-openapi.json#POST /conferences

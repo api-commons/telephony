@@ -1,0 +1,33 @@
+provider: cloudtalk
+apis_io: https://apis.io/providers/cloudtalk/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      id: uuid
+      direction:
+      - direction
+      - type
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/cloudtalk-openapi.json#GET /calls/{callId}
+    - openapi/_original/cloudtalk-openapi.json#POST /voice-agent/calls
+  recording:
+    path_segment:
+    - recording
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/cloudtalk-openapi.json#GET /calls/recording/{callId}.json
+  transcription:
+    path_segment:
+    - transcription
+    properties:
+      language: language
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cloudtalk-openapi.json#GET /ai/calls/{callId}/transcription

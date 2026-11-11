@@ -1,0 +1,17 @@
+provider: phone-com
+apis_io: https://apis.io/providers/phone-com/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - call-logs
+    - calls
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/call-logs
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/call-logs/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/extensions/{extension_id}/call-logs
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/extensions/{extension_id}/call-logs/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#POST /v4/accounts/{voip_id}/calls

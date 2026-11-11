@@ -1,0 +1,21 @@
+provider: cartesia-ai
+apis_io: https://apis.io/providers/cartesia-ai/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at: created_at
+      id: id
+      from: from
+      to: to
+      agent_id: agent_id
+      metadata: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/cartesia-ai-openapi.yml#DELETE /calls/{id}
+    - openapi/_original/cartesia-ai-openapi.yml#GET /calls
+    - openapi/_original/cartesia-ai-openapi.yml#GET /calls/{id}

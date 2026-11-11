@@ -1,0 +1,23 @@
+provider: callrail
+apis_io: https://apis.io/providers/callrail/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      created_at: start_time
+      id: id
+      direction: direction
+      from:
+      - source
+      - caller_id
+      duration: duration
+      metadata: tags
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/callrail-openapi.yml#GET /a/{account_id}/calls.json
+    - openapi/_original/callrail-openapi.yml#GET /a/{account_id}/calls/{call_id}.json
+    - openapi/_original/callrail-openapi.yml#POST /a/{account_id}/calls.json
+    - openapi/_original/callrail-openapi.yml#PUT /a/{account_id}/calls/{call_id}.json

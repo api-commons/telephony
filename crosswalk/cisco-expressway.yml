@@ -1,0 +1,16 @@
+provider: cisco-expressway
+apis_io: https://apis.io/providers/cisco-expressway/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      created_at: StartTime
+      direction: CallType
+      call_id: CallId
+      duration: Duration
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/cisco-expressway-status-api-openapi.yml#GET /status/common/calls

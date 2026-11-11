@@ -1,0 +1,23 @@
+provider: justcall
+apis_io: https://apis.io/providers/justcall/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      id: id
+      direction: type
+      call_id:
+      - call_sid
+      - call_id
+      duration: call_duration
+      agent_id: agent_id
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/justcall-openapi.json#GET /v2.1/calls
+    - openapi/_original/justcall-openapi.json#GET /v2.1/calls/{id}
+    - openapi/_original/justcall-openapi.json#GET /v2.1/sales_dialer/calls
+    - openapi/_original/justcall-openapi.json#GET /v2.1/sales_dialer/calls/{id}
+    - openapi/_original/justcall-openapi.json#GET /v2/calls

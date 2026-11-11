@@ -1,0 +1,13 @@
+provider: teliax
+apis_io: https://apis.io/providers/teliax/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/teliax-warp-openapi.json#GET /v1/trunks/{trunk_id}/credentials/{cred_id}/calls
+    - openapi/_original/teliax-warp-openapi.yml#GET /v1/trunks/{trunk_id}/credentials/{cred_id}/calls

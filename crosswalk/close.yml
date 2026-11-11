@@ -1,0 +1,27 @@
+provider: close
+apis_io: https://apis.io/providers/close/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - call
+    properties:
+      status: status
+      created_at: date_created
+      id: id
+      direction:
+      - _type
+      - direction
+      from: source
+      duration: duration
+      agent_id: user_id
+      updated_at: date_updated
+      metadata: custom_fields
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/close-api-openapi.json#DELETE /activity/call/{id}/
+    - openapi/_original/close-api-openapi.json#GET /activity/call/
+    - openapi/_original/close-api-openapi.json#GET /activity/call/{id}/
+    - openapi/_original/close-api-openapi.json#POST /activity/call/
+    - openapi/_original/close-api-openapi.json#PUT /activity/call/{id}/

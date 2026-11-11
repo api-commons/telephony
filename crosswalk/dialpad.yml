@@ -1,0 +1,23 @@
+provider: dialpad
+apis_io: https://apis.io/providers/dialpad/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - call
+    - calls
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/dialpad-openapi.yml#GET /call/{id}
+    - openapi/_original/dialpad-openapi.yml#GET /calls
+    - openapi/_original/dialpad-openapi.yml#POST /call
+    - openapi/_original/dialpad-openapi.yml#POST /users/{id}/call
+  transcription:
+    path_segment:
+    - transcripts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/dialpad-openapi.yml#GET /transcripts/{call_id}

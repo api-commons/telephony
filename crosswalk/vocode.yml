@@ -1,0 +1,28 @@
+provider: vocode
+apis_io: https://apis.io/providers/vocode/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      status: status
+      created_at: start_time
+      id: id
+      from: from_number
+      to: to_number
+      ended_at: end_time
+      agent_id:
+      - user_id
+      - agent
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/vocode-openapi.yml#GET /calls
+  recording:
+    path_segment:
+    - recording
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/vocode-openapi.yml#GET /calls/recording

@@ -1,0 +1,30 @@
+provider: fixie
+apis_io: https://apis.io/providers/fixie/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      created_at: created
+      ended_at: ended
+      call_id: callId
+      agent_id:
+      - agent
+      - agentId
+      metadata: metadata
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/fixie-ultravox-openapi-original.yml#DELETE /api/calls/{call_id}
+    - openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/accounts/me/usage/calls
+    - openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/agents/{agent_id}/calls
+    - openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/calls
+    - openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/calls/{call_id}
+  recording:
+    path_segment:
+    - recording
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fixie-ultravox-openapi-original.yml#GET /api/calls/{call_id}/recording

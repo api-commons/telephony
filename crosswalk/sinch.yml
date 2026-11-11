@@ -1,0 +1,19 @@
+provider: sinch
+apis_io: https://apis.io/providers/sinch/
+context: telephony
+generated: '2026-11-10'
+concepts:
+  call:
+    path_segment:
+    - calls
+    properties:
+      created_at: createTime
+      direction: direction
+      from: from
+      to: to
+      ended_at: endTime
+      call_id: callId
+      duration: durationSeconds
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/sinch-elastic-sip-trunking-api-openapi.yaml#GET /v1/projects/{projectId}/calls
